@@ -2,13 +2,335 @@
 <feed xml:lang='en-US' xmlns='http://www.w3.org/2005/Atom'>
   <id>http://lukas.fryc.eu/</id>
   <title>Lukas Fryc</title>
-  <updated>2013-01-15T23:27:24+01:00</updated>
+  <updated>2013-01-16T00:09:41+01:00</updated>
   <link href='http://lukas.fryc.eu/feed.atom' rel='self' type='application/atom+xml' />
   <link href='http://lukas.fryc.eu/' rel='alternate' type='text/html' />
   <entry>
+    <id>http://lukas.fryc.eu/blog/2013/01/arquillian-graphene-2.html</id>
+    <title>Graphene 2.0.0.Alpha3 Released</title>
+    <updated>2013-01-16T00:09:41+01:00</updated>
+    <published>2013-01-15T00:00:00Z</published>
+    <link href='http://lukas.fryc.eu/blog/2013/01/arquillian-graphene-2.html' rel='alternate' type='text/html' />
+    <category term='arquillian'></category>
+    <category term='graphene'></category>
+    <summary>
+      Highlighted Features
+      
+      	 jQuery Selectors
+      	Graphene gets its own @FindBy annotation and ByJQuery selector in order to fully support jQuery selectors. (read more)
+      
+      
+      	 Injecting Selenium Resources
+      	The interesting Selenium APIs (HTML5, Mobile, etc.) can be injected to the test or page fragments directly. (read more)
+      
+      
+      	 Fluent API for Waiting
+      	Waiting conditions can now be defined in a nice fluent API. (read more)
+      
+      
+      	 Injecting List of Page Fragments
+      	It&#8217;s possible to inject a list of page fragments with @FindBy List&lt;PageFragment&gt;.
+      
+      
+      	 Page Fragment Enrichment
+      	Any Arquillian resource available through @ArquillianResource can be injected into page fragments.
+      
+      Important Bug Fixes
+      
+      	 XHR Request Guards
+      	guardXhr wasn&#8217;t waiting for the XHR request to...
+    </summary>
+    <content type='html'>
+      &lt;h3&gt;Highlighted Features&lt;/h3&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; jQuery Selectors&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;Graphene gets its own &lt;code&gt;@FindBy&lt;/code&gt; annotation and &lt;code&gt;ByJQuery&lt;/code&gt; selector in order to fully support &lt;em&gt;jQuery&lt;/em&gt; selectors. (&lt;a href=&quot;#jquery-selectors&quot;&gt;read more&lt;/a&gt;)&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Injecting Selenium Resources&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;The interesting Selenium APIs (HTML5, Mobile, etc.) can be injected to the test or page fragments directly. (&lt;a href=&quot;#injecting-selenium-resources&quot;&gt;read more&lt;/a&gt;)&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Fluent &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; for Waiting&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;Waiting conditions can now be defined in a nice fluent &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;. (&lt;a href=&quot;#waiting-fluent-api&quot;&gt;read more&lt;/a&gt;)&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Injecting List of Page Fragments&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;It&amp;#8217;s possible to inject a list of page fragments with &lt;code&gt;@FindBy List&amp;lt;PageFragment&amp;gt;&lt;/code&gt;.&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Page Fragment Enrichment&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;Any Arquillian resource available through &lt;code&gt;@ArquillianResource&lt;/code&gt; can be injected into page fragments.&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h3&gt;Important Bug Fixes&lt;/h3&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; &lt;span class=&quot;caps&quot;&gt;XHR&lt;/span&gt; Request Guards&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;&lt;code&gt;guardXhr&lt;/code&gt; wasn&amp;#8217;t waiting for the &lt;span class=&quot;caps&quot;&gt;XHR&lt;/span&gt; request to fully complete. So we have improved it and now it not only waits for &lt;span class=&quot;caps&quot;&gt;AJAX&lt;/span&gt; callback to completely finish, but it will wait for any asynchronous processing caused by that callback to finish.&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Protecting against Stale Elements&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;You are now completely protected against &lt;code&gt;StaleElementReferenceException&lt;/code&gt; when using page fragments and elements injected by &lt;code&gt;@FindBy&lt;/code&gt;, because operations on those elements are evaluated lazily (at the time of usage) and they are re-evaluated when they get stale.&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Refined Page Fragments&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;Page Fragments have received a lot of bug fixes and improvements.&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h3 id=&quot;jquery-selectors&quot;&gt;jQuery Selectors&lt;/h3&gt;
+&lt;p&gt;This feature injects a &lt;tt&gt;&lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt;&lt;/tt&gt; script to a tested page and allows Graphene to find elements using the &lt;a href=&quot;http://api.jquery.com/category/selectors/?rdfrom=http%3A%2F%2Fdocs.jquery.com%2Fmw%2Findex.php%3Ftitle%3DSelectors%26redirect%3Dno&quot;&gt;jQuery Selectors syntax&lt;/a&gt;:&lt;/p&gt;
+&lt;pre class=&quot;prettify&quot;&gt;&lt;code class=&quot;prettify&quot;&gt;@FindBy(jquery = &quot;:button:visible&quot;)&amp;#x000A;WebElement firstVisibleButton;&lt;/code&gt;&lt;/pre&gt;
+&lt;p class=&quot;info&quot;&gt;&lt;span&gt;Note that Graphene injects jQuery in &lt;a href=&quot;http://api.jquery.com/jQuery.noConflict/&quot;&gt;non-conflict way&lt;/a&gt;, so it does not affect your tested application.&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;injecting-selenium-resources&quot;&gt;Injecting Selenium Resources&lt;/h3&gt;
+&lt;p&gt;Graphene leverages a long list of advanced Selenium features and their APIs to take full control of your browser:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;HTML5&lt;/strong&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href=&quot;http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/html5/WebStorage.html&quot;&gt;&lt;code&gt;WebStorage&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/html5/DatabaseStorage.html&quot;&gt;&lt;code&gt;DatabaseStorage&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/html5/ApplicationCache.html&quot;&gt;&lt;code&gt;ApplicationCache&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Mobile-specific&lt;/strong&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href=&quot;http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/TouchScreen.html&quot;&gt;&lt;code&gt;TouchScreen&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/Rotatable.html&quot;&gt;&lt;code&gt;Rotatable&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/html5/BrowserConnection.html&quot;&gt;&lt;code&gt;BrowserConnection&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/html5/LocationContext.html&quot;&gt;&lt;code&gt;LocationContext&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Advanced Browser Control&lt;/strong&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href=&quot;http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/interactions/Actions.html&quot;&gt;&lt;code&gt;Actions&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/Keyboard.html&quot;&gt;&lt;code&gt;Keyboard&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/Mouse.html&quot;&gt;&lt;code&gt;Mouse&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/JavascriptExecutor.html&quot;&gt;&lt;code&gt;JavascriptExecutor&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/TakesScreenshot.html&quot;&gt;&lt;code&gt;TakesScreenshot&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/Capabilities.html&quot;&gt;&lt;code&gt;Capabilities&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can inject those using &lt;code&gt;@ArquillianResource&lt;/code&gt; annotation:&lt;/p&gt;
+&lt;pre class=&quot;prettify&quot;&gt;&lt;code class=&quot;prettify&quot;&gt;@ArquillianResource&amp;#x000A;BrowserConnection connection;&lt;/code&gt;&amp;#x000A;&amp;#x000A;&lt;code class=&quot;prettify&quot;&gt;@Test&amp;#x000A;public void test() {&amp;#x000A;    connection.setOnline(false);&amp;#x000A;}&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;waiting-fluent-api&quot;&gt;Fluent &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; for Waiting&lt;/h3&gt;
+&lt;p&gt;The Alpha2 &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; allowed you to define a wait like this:&lt;/p&gt;
+&lt;pre class=&quot;prettify&quot;&gt;&lt;code class=&quot;prettify&quot;&gt;waitAjax().until(element(button).isVisible());&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In order to fully support code-completion, we have decided to deprecate this &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; in favor of a fluent &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;:&lt;/p&gt;
+&lt;pre class=&quot;prettify&quot;&gt;&lt;code class=&quot;prettify&quot;&gt;waitAjax().until().element(button).is().visible();&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Roadmap&lt;/h3&gt;
+&lt;p&gt;This release is a significant milestone &lt;a href=&quot;https://community.jboss.org/message/777443#777443&quot;&gt;on the way to Beta1&lt;/a&gt;.&lt;/p&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>http://lukas.fryc.eu/blog/2013/01/arquillian-extension-warp-1.html</id>
+    <title>Warp 1.0.0.Alpha2 Released</title>
+    <updated>2013-01-16T00:09:35+01:00</updated>
+    <published>2013-01-15T00:00:00Z</published>
+    <link href='http://lukas.fryc.eu/blog/2013/01/arquillian-extension-warp-1.html' rel='alternate' type='text/html' />
+    <category term='arquillian'></category>
+    <category term='warp'></category>
+    <summary>
+      It has been a pretty long road from Alpha1 to this release, focused primarily on polishing the user experience.
+So without any further ado, let’s look at the new shiny features!
+Highlighted Features
+
+	 Renaming Warp API methods
+	The API methods were renamed according to the results of our public survey. (read more)
+
+In the simplest scenario you want to inspect the first request after performing a given client activity. For this purpose, you can use a basic Warp API known from Alpha1:
+Warp
+    .initiate(Activity)
+    .inspect(Inspection);
+This will intercept the first request coming from the client and ignore the rest of...
+    </summary>
+    <content type='html'>
+      &lt;p&gt;It has been a pretty long road from Alpha1 to this release, focused primarily on polishing the user experience.&lt;/p&gt;
+&lt;p&gt;So without any further ado, let’s look at the new shiny features!&lt;/p&gt;
+&lt;h3&gt;Highlighted Features&lt;/h3&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Renaming Warp &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; methods&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;The &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; methods were renamed according to the results of our public survey. (&lt;a href=&quot;#renaming-warp-api&quot;&gt;read more&lt;/a&gt;)&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;In the simplest scenario you want to inspect the first request after performing a given client activity. For this purpose, you can use a basic Warp &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; known from Alpha1:&lt;/p&gt;
+&lt;pre class=&quot;prettify&quot;&gt;&lt;code class=&quot;prettify&quot;&gt;Warp&amp;#x000A;    .initiate(Activity)&amp;#x000A;    .inspect(Inspection);&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will intercept the first request coming from the client and ignore the rest of the potential requests.&lt;/p&gt;
+&lt;p&gt;Additionally, Warp will ignore requests for &lt;tt&gt;favicon.ico&lt;/tt&gt; which could fail your test unexpectadly.&lt;/p&gt;
+&lt;p&gt;You can find more samples for this &lt;a href=&quot;https://github.com/arquillian/arquillian-extension-warp/blob/1.0.0.Alpha2/api/src/test/java/org/jboss/arquillian/warp/TestExecutionAPI.java#L62&quot;&gt;&lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; in a source&lt;/a&gt; .&lt;/p&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Anonymous and Inner Classes&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;It&amp;#8217;s now much easier to define a verification code, which is also more readable.&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;In &lt;em&gt;Alpha1&lt;/em&gt;, you had to use a &lt;em&gt;top-level&lt;/em&gt; or a &lt;em&gt;static inner classes&lt;/em&gt; to define inspections.&lt;/p&gt;
+&lt;p&gt;In &lt;em&gt;Alpha2&lt;/em&gt;, you can provide &lt;em&gt;non-static inner class&lt;/em&gt; or even &lt;em&gt;anonymous class&lt;/em&gt;.&lt;/p&gt;
+&lt;div class=&quot;filename&quot;&gt;HelloWarp.java&lt;/div&gt;
+&lt;pre class=&quot;prettify&quot;&gt;&lt;code class=&quot;prettify&quot;&gt;Warp&amp;#x000A;    // first you need to initiate activity which triggers HTTP request&amp;#x000A;    .initiate(new Activity() {&amp;#x000A;        public void perform() {&amp;#x000A;            ajaxButton.click();&amp;#x000A;        }&amp;#x000A;    })&lt;/code&gt;&amp;#x000A;&amp;#x000A;&lt;code class=&quot;prettify&quot;&gt;    // and then specify what behavior should be inspected on the server&amp;#x000A;    .inspect(new Inspection() {&lt;/code&gt;&amp;#x000A;&amp;#x000A;&lt;code class=&quot;prettify&quot;&gt;        // don't forget to specify serialVerionUID to allow serialization&amp;#x000A;        private static final long serialVersionUID = 1L;&lt;/code&gt;&amp;#x000A;        &amp;#x000A;&lt;code class=&quot;prettify&quot;&gt;        // bring JSF context via dependency injection&amp;#x000A;        @ArquillianResource&amp;#x000A;        FacesContext facesContext;&lt;/code&gt;&amp;#x000A;&amp;#x000A;&lt;code class=&quot;prettify&quot;&gt;        // verify expected behavior in given request phase&amp;#x000A;        @AfterPhase(RESTORE_VIEW)&amp;#x000A;        public void beforeServlet() {&amp;#x000A;            assertTrue(facesContext.isPostback());&amp;#x000A;        }&amp;#x000A;    });&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This example showed how to use the new &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; together with anonymous inspections&lt;/p&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Multiple Requests / Request Groups&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;It is possible to intercept several requests during one Warp execution.&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Warp allows you to verify more than one request triggered by a single client activity. This allows you to verify e.g. a request for &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; page and all its resources (JS, &lt;span class=&quot;caps&quot;&gt;CSS&lt;/span&gt;, images) separately. This feature is called &lt;em&gt;Request Groups&lt;/em&gt;.&lt;/p&gt;
+&lt;div class=&quot;filename&quot;&gt;TestRequestGroups.java&lt;/div&gt;
+&lt;pre class=&quot;prettify&quot;&gt;&lt;code class=&quot;prettify&quot;&gt;// Request Group execution will return WarpResult&amp;#x000A;WarpResult result = Warp&amp;#x000A;    .initiate(Activity)&amp;#x000A;    // a group specification without name - the name will be generated&amp;#x000A;    .group()&amp;#x000A;        .observe(HttpRequestFilter)&amp;#x000A;        .inspect(Inspection1)&amp;#x000A;    // a named group specification - the result can be easily accessed&amp;#x000A;    .group(&quot;second&quot;)&amp;#x000A;        .observe(HttpRequestFilter)&amp;#x000A;        .inspect(Inspection2)&amp;#x000A;    // you need to execute whole Request Group once it is completely specified&amp;#x000A;    .execute();&lt;/code&gt;&amp;#x000A;    &amp;#x000A;&lt;code class=&quot;prettify&quot;&gt;    // you can access details of finished execution&amp;#x000A;    result.getGroup(&quot;second&quot;).getInspection();&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;em&gt;Request Groups&lt;/em&gt; execution returns a &lt;code&gt;WarpResult&lt;/code&gt; which contains details about the finished execution. In order to access the results related to a specific group, you can give the group a name&lt;/p&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Request Observers &amp;amp; Fluent &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;The new &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; for observing the correct request allows you to select which request should be verified on a server.&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;When using &lt;em&gt;Request Groups&lt;/em&gt;, all of the requests will be inspected by the inspections defined in that group. There might be one or more requests verified by each group.&lt;/p&gt;
+&lt;p&gt;Since multiple request can be triggered, you might want to choose the correct request to observe. For this purpose, we have the &lt;code&gt;HttpRequestFilter&lt;/code&gt; interface, where you specify which &lt;code&gt;HttpRequest&lt;/code&gt; should matches the current group.&lt;/p&gt;
+&lt;pre class=&quot;prettify&quot;&gt;&lt;code class=&quot;prettify&quot;&gt;import static org.jboss.arquillian.warp.client.filter.http.HttpFilters.request;&lt;/code&gt;&amp;#x000A;&amp;#x000A;&lt;code class=&quot;prettify&quot;&gt;// will accept only requests for HTML&amp;#x000A;...group()&amp;#x000A;    .observe(request().uri().contains(&quot;.html&quot;))&lt;/code&gt;&amp;#x000A;&amp;#x000A;&lt;code class=&quot;prettify&quot;&gt;// will accept only REST requests for JSON&amp;#x000A;...group()&amp;#x000A;    .observe(request().header().containsValue(&quot;Accept&quot;, &quot;application/json&quot;))&lt;/code&gt;&amp;#x000A;&amp;#x000A;&lt;code class=&quot;prettify&quot;&gt;// will accept only POST requests&amp;#x000A;...group()&amp;#x000A;   .observe(request().method().equal(POST))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In order to simplify writing the Warp specifications, you can define the observer using a fluent &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; and static factory methods.&lt;/p&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Dependency Injection for Servlets and &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt;&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;Test enrichers now allow the the injection of Servlet and &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt; resources. (&lt;a href=&quot;#servlet-jsf-enrichments&quot;&gt;read more&lt;/a&gt;)&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Renaming Phaser to Warp &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt;&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;The &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt; specific extension was renamed from Phaser to Warp &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt;. (&lt;a href=&quot;#renaming-phaser-to-warp-jsf&quot;&gt;read more&lt;/a&gt;)&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Introduction of Dependency Chain&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;The dependency chain was introduced to bring in all necessary dependencies by specifying just one dependency. (&lt;a href=&quot;#warp-dependency-chain&quot;&gt;read more&lt;/a&gt;)&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Warp Extensions for &lt;span class=&quot;caps&quot;&gt;REST&lt;/span&gt; and Spring &lt;span class=&quot;caps&quot;&gt;MVC&lt;/span&gt;&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;Thanks to &lt;a href=&quot;http://lukas.fryc.eu/community/contributors/&quot;&gt;Jakub Narloch&lt;/a&gt;, we have two new additions to Arquillian Galaxy. (&lt;a href=&quot;#warp-extensions-rest-spring&quot;&gt;read more&lt;/a&gt;)&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h3&gt;Under the Hood&lt;/h3&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Usability and Debugging Improvements&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;A focus of Alpha2 was to polishing the way Warp behave in case of failures and on debuggability of Warp execution.&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Validation of Warp Specification&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;Warp now validates that the number of observed requests match a number of expected requests. It also makes sure that all of defined lifecycle callbacks are executed on the server, to avoid any false positives.&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;As you can see there are many of new features, so let&amp;#8217;s look at them separately:&lt;/p&gt;
+&lt;h3 id=&quot;renaming-warp-api&quot;&gt;Renaming Warp &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;After Alpha1 we &lt;a href=&quot;https://community.jboss.org/message/777404#777404&quot;&gt;got several requests&lt;/a&gt; for clarifying the Warp high-level &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;:&lt;/p&gt;
+&lt;pre class=&quot;prettify&quot;&gt;&lt;code class=&quot;prettify&quot;&gt;Warp.execute(ClientAction).verify(ServerAssertion)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;a href=&quot;https://docs.google.com/spreadsheet/viewform?formkey=dFlZeGI3ZklOUVlDX2M2V2owUkFmYVE6MQ&quot;&gt;announced survey&lt;/a&gt; helped us choose the new &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;. As a result, &lt;a href=&quot;https://issues.jboss.org/secure/attachment/12358992/warp-api-method-naming-survey-responses.pdf&quot;&gt;88&amp;#37; of participants reported&lt;/a&gt; they found this new &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; more natural:&lt;/p&gt;
+&lt;pre class=&quot;prettify&quot;&gt;&lt;code class=&quot;prettify&quot;&gt;Warp.initiate(Activity).inspect(Inspection)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Big thanks to everyone who participated in the survey! This type of collaboration makes me really proud to be part of the team.&lt;/p&gt;
+&lt;h3 id=&quot;warp-extensions-rest-spring&quot;&gt;Warp Extensions: &lt;span class=&quot;caps&quot;&gt;REST&lt;/span&gt; and Spring &lt;span class=&quot;caps&quot;&gt;MVC&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;Warp was from the beginning built as a project that focused on any framework/technology that is based on top of the Servlet &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Thus it&amp;#8217;s not surprising that there are already two extensions shaping out thanks to &lt;a href=&quot;http://lukas.fryc.eu/community/contributors/&quot;&gt;Jakub Narloch&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;http://lukas.fryc.eu/blog/2012/07/24/arquillian-extension-spring-1-0-0-Alpha2/&quot;&gt;Spring &lt;span class=&quot;caps&quot;&gt;MVC&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;https://github.com/jmnarloch/arquillian-extension-warp-rest&quot;&gt;&lt;span class=&quot;caps&quot;&gt;REST&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;warp-dependency-chain&quot;&gt;Introduction of Dependency Chain&lt;/h3&gt;
+&lt;p&gt;Putting Warp to work in your Maven project is now as easy as defining a single dependency:&lt;/p&gt;
+&lt;div class=&quot;filename&quot;&gt;pom.xml&lt;/div&gt;
+&lt;pre class=&quot;prettify&quot;&gt;&lt;code class=&quot;prettify&quot;&gt;&amp;lt;dependency&amp;gt;&amp;#x000A;    &amp;lt;groupId&amp;gt;org.jboss.arquillian.extension&amp;lt;/groupId&amp;gt;&amp;#x000A;    &amp;lt;artifactId&amp;gt;arquillian-warp&amp;lt;/artifactId&amp;gt;&amp;#x000A;    &amp;lt;version&amp;gt;1.0.0.Alpha2&amp;lt;/version&amp;gt;&amp;#x000A;    &amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt;&amp;#x000A;&amp;lt;/dependency&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This declaration will bring Warp core, which supports Servlet &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; lifecycle callbacks.&lt;/p&gt;
+&lt;h3 id=&quot;renaming-phaser-to-warp-jsf&quot;&gt;Renaming Phaser to Warp &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;Initially we had created Phaser as the next generation of the successful &lt;a href=&quot;http://www.jboss.org/jsfunit/&quot;&gt;JSFUnit&lt;/a&gt;. It occured to use that Phaser is an unfortunate name and it just makes it harded to understand the Arquillian eco-system.&lt;/p&gt;
+&lt;p&gt;That&amp;#8217;s why we have come up with a simpler variant &amp;#8211; so let me introduce the Warp &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt; extension.&lt;/p&gt;
+&lt;p&gt;You can bring Warp &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt; to your project just by adding the following declaration:&lt;/p&gt;
+&lt;div class=&quot;filename&quot;&gt;pom.xml&lt;/div&gt;
+&lt;pre class=&quot;prettify&quot;&gt;&lt;code class=&quot;prettify&quot;&gt;&amp;lt;dependency&amp;gt;&amp;#x000A;    &amp;lt;groupId&amp;gt;org.jboss.arquillian.extension&amp;lt;/groupId&amp;gt;&amp;#x000A;    &amp;lt;artifactId&amp;gt;arquillian-warp-jsf&amp;lt;/artifactId&amp;gt;&amp;#x000A;    &amp;lt;version&amp;gt;1.0.0.Alpha2&amp;lt;/version&amp;gt;&amp;#x000A;&amp;lt;/dependency&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;servlet-jsf-enrichments&quot;&gt;Dependency Injection for Servlets and &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;After the announcement of the Alpha1 release, we focused on improving Warp to come closer to the Arquillian goal: bring all necessary dependencies to the test (in our case to inspection).&lt;/p&gt;
+&lt;p&gt;Now, you can not only inject all &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; managed beans (&lt;code&gt;@Inject&lt;/code&gt;), &lt;span class=&quot;caps&quot;&gt;EJB&lt;/span&gt; beans (&lt;code&gt;@EJB&lt;/code&gt;) or container managed resources &lt;code&gt;@Resource&lt;/code&gt;, but you can also inject the following resources:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;Servlet resources&lt;/strong&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;code&gt;ServletRequest&lt;/code&gt; or &lt;code&gt;HttpServletRequest&lt;/code&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;code&gt;ServletResponse&lt;/code&gt; or &lt;code&gt;HttpServletResponse&lt;/code&gt;&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;&lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt; resources&lt;/strong&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;code&gt;FacesContext&lt;/code&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;code&gt;Application&lt;/code&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;code&gt;ELContext&lt;/code&gt;, &lt;code&gt;ELResolver&lt;/code&gt;, &lt;code&gt;ExpressionFactory&lt;/code&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;code&gt;ExceptionHandler&lt;/code&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;code&gt;Flash&lt;/code&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;code&gt;NavigationHandler&lt;/code&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;code&gt;PartialViewContext&lt;/code&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;code&gt;RenderKit&lt;/code&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;code&gt;ResourceHandler&lt;/code&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;code&gt;StateManager&lt;/code&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;code&gt;UIViewRoot&lt;/code&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;code&gt;ViewHandler&lt;/code&gt;&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Migration from Alpha1&lt;/h3&gt;
+&lt;p&gt;We&amp;#8217;ve create a little &lt;a href=&quot;https://gist.github.com/4275537&quot;&gt;bash script&lt;/a&gt; to convert the java source from Alpha1 &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; to Alpha2 that might help you with the upgrade.&lt;/p&gt;
+&lt;h3&gt;How to Learn Warp?&lt;/h3&gt;
+&lt;p&gt;The best way now is to look at functional tests for &lt;a href=&quot;https://github.com/arquillian/arquillian-extension-warp/tree/master/ftest/src/test/java/org/jboss/arquillian/warp/ftest&quot;&gt;Warp&lt;/a&gt; or &lt;a href=&quot;https://github.com/arquillian/arquillian-extension-warp/tree/master/extension/jsf-ftest/src/test/java/org/jboss/arquillian/warp/jsf/ftest&quot;&gt;Warp &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Roadmap&lt;/h3&gt;
+&lt;p&gt;The roadmap to &lt;em&gt;Beta1&lt;/em&gt; is pretty clear:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;documentation and guides&lt;/li&gt;
+	&lt;li&gt;adding features known from &lt;a href=&quot;http://docs.jboss.org/seam/2.0.1.GA/reference/en/html/testing.html&quot;&gt;SeamTest&lt;/a&gt; and &lt;a href=&quot;http://www.jboss.org/jsfunit/&quot;&gt;JSFUnit&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;new injections and event hooks (e.g. improved &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; integration)&lt;/li&gt;
+	&lt;li&gt;hardering and usability enhancements (here we rely on your issue reports!)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Along the way we will welcome &lt;strong&gt;every idea for integrating Warp with your favorite web framework&lt;/strong&gt; &amp;#8211; so don&amp;#8217;t be a stranger and come to us!&lt;/p&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>http://lukas.fryc.eu/blog/2012/09/arquillian-graphene-2.html</id>
+    <title>Graphene 2.0.0.Alpha2 Released</title>
+    <updated>2013-01-16T00:09:30+01:00</updated>
+    <published>2012-09-17T00:00:00Z</published>
+    <link href='http://lukas.fryc.eu/blog/2012/09/arquillian-graphene-2.html' rel='alternate' type='text/html' />
+    <category term='arquillian'></category>
+    <category term='graphene'></category>
+    <summary>
+      Graphene 2 is building on top of the Selenium WebDriver API and provide extensions for writing reusable, robust and AJAX-enabled tests with improved readability.
+      Graphene 2 uses the ideas from Graphene 1 (based on Selenium 1 API) and applies it to the world of Selenium WebDriver.
+      You can read more about the difference between Graphene 1 and Graphene 2 in the Reference Documentation
+      Features
+      Page Abstractions
+      Page abstractions allow you to abstract page functionality using the well-known Selenium design pattern Page Objects. In Graphene you can inject page objects directly into the test case using the @Page annotation.
+      But we take the Page Objects pattern one...
+    </summary>
+    <content type='html'>
+      &lt;p&gt;&lt;em&gt;Graphene 2&lt;/em&gt; is building on top of the Selenium WebDriver &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; and provide extensions for writing &lt;strong&gt;reusable&lt;/strong&gt;, &lt;strong&gt;robust&lt;/strong&gt; and &lt;strong&gt;&lt;span class=&quot;caps&quot;&gt;AJAX&lt;/span&gt;-enabled&lt;/strong&gt; tests with improved &lt;strong&gt;readability&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Graphene 2&lt;/em&gt; uses the ideas from &lt;em&gt;Graphene 1&lt;/em&gt; (based on &lt;em&gt;Selenium 1 &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;&lt;/em&gt;) and applies it to the world of &lt;a href=&quot;http://seleniumhq.org/projects/webdriver/&quot;&gt;Selenium WebDriver&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can read more about the difference between Graphene 1 and Graphene 2 in the &lt;a href=&quot;https://docs.jboss.org/author/pages/viewpage.action?pageId=53118297&quot;&gt;Reference Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Features&lt;/h3&gt;
+&lt;h4&gt;Page Abstractions&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.jboss.org/author/display/ARQGRA2/Page+Abstractions&quot;&gt;Page abstractions&lt;/a&gt; allow you to abstract page functionality using the well-known Selenium design pattern &lt;a href=&quot;http://code.google.com/p/selenium/wiki/PageObjects&quot;&gt;&lt;em&gt;Page Objects&lt;/em&gt;&lt;/a&gt;. In Graphene you can inject page objects directly into the test case using the &lt;code&gt;@Page&lt;/code&gt; annotation.&lt;/p&gt;
+&lt;p&gt;But we take the &lt;em&gt;Page Objects&lt;/em&gt; pattern one step further with the concept of &lt;a href=&quot;https://docs.jboss.org/author/display/ARQGRA2/Page+Fragments&quot;&gt;&lt;em&gt;Page Fragments&lt;/em&gt;&lt;/a&gt; . &lt;em&gt;Page Fragments&lt;/em&gt; are reusable parts within a page encapsulated into an object similar to &lt;em&gt;Page Objects&lt;/em&gt;. A good example of &lt;em&gt;Page Fragments&lt;/em&gt; are JavaScript widgets or forms.&lt;/p&gt;
+&lt;p&gt;The concept of &lt;em&gt;Page Fragments&lt;/em&gt; comes from an idea that those components share a same underlying &lt;span class=&quot;caps&quot;&gt;DOM&lt;/span&gt; structure, the only difference between all occurences of a component is a location in a &lt;span class=&quot;caps&quot;&gt;DOM&lt;/span&gt; tree where a component is rendered &amp;#8211; this is denoted by the &lt;code&gt;@Root&lt;/code&gt; annotation. You can define this root location for each concrete occurence using a &lt;code&gt;@FindBy(locator)&lt;/code&gt; annotation.&lt;/p&gt;
+&lt;h4&gt;Fluent-&lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; for Waiting Conditions&lt;/h4&gt;
+&lt;p&gt;Graphene provides a set of widely used &lt;a href=&quot;https://docs.jboss.org/author/display/ARQGRA2/Graphene+Utility+Class&quot;&gt;conditions to avoid writing them repeatedly&lt;/a&gt;.&lt;/p&gt;
+&lt;h4&gt;Request Guards&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.jboss.org/author/display/ARQGRA2/Request+Guards&quot;&gt;Request guards&lt;/a&gt; block the Selenium test execution until a network communication caused by a given action ends. Guards support blocking on &lt;em&gt;&lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt;&lt;/em&gt; and &lt;em&gt;&lt;span class=&quot;caps&quot;&gt;XHR&lt;/span&gt; (&lt;span class=&quot;caps&quot;&gt;AJAX&lt;/span&gt;)&lt;/em&gt; but can also be used to verify that no such requests were done.&lt;/p&gt;
+&lt;h4&gt;Under the Hood&lt;/h4&gt;
+&lt;p&gt;There are some low level features exposed as &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; that are used by Graphene internally. While not used regularly within a normal test, can be handy to write more robust tests:&lt;/p&gt;
+&lt;h5&gt;&lt;a href=&quot;https://docs.jboss.org/author/display/ARQGRA2/JavaScript+Interface&quot;&gt;JavaScript Interface&lt;/a&gt;&lt;/h5&gt;
+&lt;p&gt;This allows you to write a Java interface which automatically translates Java &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; invocations to JavaScript calls:&lt;/p&gt;
+&lt;pre class=&quot;prettify&quot;&gt;&lt;code class=&quot;prettify&quot;&gt;@JavaScript&amp;#x000A;public interface Document {&amp;#x000A;    String getTitle();&amp;#x000A;}&lt;/code&gt;&lt;/pre&gt;
+&lt;h5&gt;Page Extensions&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.jboss.org/author/display/ARQGRA2/Page+Extensions&quot;&gt;Page Extensions&lt;/a&gt; allow you to inject arbitrary JavaScript code in the page under the test. The javascript code might help you to test complex situations as well as bring completely new features for improving testing. Graphene internally uses &lt;em&gt;Page Extensions&lt;/em&gt; for &lt;em&gt;Request Guards&lt;/em&gt;.&lt;/p&gt;
+&lt;h5&gt;&lt;a href=&quot;https://docs.jboss.org/author/display/ARQGRA2/Graphene+Context+and+Proxy&quot;&gt;Graphene Context&lt;/a&gt;&lt;/h5&gt;
+&lt;p&gt;Graphene allows you to obtain current thread-local context of a browser session and inject it exactly where you need. No more need for driver reference propagation.&lt;/p&gt;
+&lt;h4&gt;Documentation&lt;/h4&gt;
+&lt;p&gt;Last but definitely not the least addition is &lt;a href=&quot;https://docs.jboss.org/author/display/ARQGRA2/Home&quot;&gt;the great documentation&lt;/a&gt; for all of the features above including answers for general questions like &lt;a href=&quot;https://docs.jboss.org/author/pages/viewpage.action?pageId=53118297&quot;&gt;&lt;em&gt;how Selenium 1, Graphene 1, Selenium WebDriver and Graphene 2 relates to each other&lt;/em&gt;&lt;/a&gt;, what&amp;#8217;s the &lt;a href=&quot;https://docs.jboss.org/author/display/ARQGRA2/Using+Drone&quot;&gt;&lt;em&gt;relation between Graphene&amp;#8217;s, Drone and Arquillian&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;https://docs.jboss.org/author/display/ARQGRA2/Getting+Started&quot;&gt;Getting Started&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;It&amp;#8217;s the same as with any other Arquillian extension: open the &lt;span class=&quot;caps&quot;&gt;IDE&lt;/span&gt;, setup the &lt;a href=&quot;https://docs.jboss.org/author/display/ARQGRA2/Framework+Integration+Options&quot;&gt;Maven dependency&lt;/a&gt; and you are ready to &lt;a href=&quot;https://docs.jboss.org/author/display/ARQGRA2/Getting+Started&quot;&gt;start testing&lt;/a&gt;!&lt;/p&gt;
+&lt;h3&gt;What’s next?&lt;/h3&gt;
+&lt;p&gt;In the upcoming releases, we would like to focus on more new features as well as migrate some features from Graphene 1 to Graphene 2:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Forge plugin for quick start&lt;/li&gt;
+	&lt;li&gt;command interceptors&lt;/li&gt;
+	&lt;li&gt;parallel browser session control&lt;/li&gt;
+	&lt;li&gt;jQuery/Sizzle locators&lt;/li&gt;
+	&lt;li&gt;&lt;span class=&quot;caps&quot;&gt;AJAX&lt;/span&gt;/&lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; Communication Halter&lt;/li&gt;
+	&lt;li&gt;page abstraction improvements&lt;/li&gt;
+	&lt;li&gt;closer integration with the Arquillian event system&lt;/li&gt;
+	&lt;li&gt;helpers for writing browser specific code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Call to Action&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://community.jboss.org/en/arquillian&quot;&gt;Let us know what you think&lt;/a&gt; and &lt;a href=&quot;https://issues.jboss.org/browse/ARQGRA&quot;&gt;help us shape Graphene&lt;/a&gt; to be what you want it to be.&lt;/p&gt;
+    </content>
+  </entry>
+  <entry>
     <id>http://lukas.fryc.eu/blog/2012/08/incremental-build-with-richfaces-cdk.html</id>
     <title>Incremental build with RichFaces CDK</title>
-    <updated>2013-01-15T23:27:24+01:00</updated>
+    <updated>2013-01-15T23:53:08+01:00</updated>
     <published>2012-08-30T00:00:00Z</published>
     <link href='http://lukas.fryc.eu/blog/2012/08/incremental-build-with-richfaces-cdk.html' rel='alternate' type='text/html' />
     <category term='richfaces'></category>
@@ -49,7 +371,7 @@
   <entry>
     <id>http://lukas.fryc.eu/blog/2012/08/jsf-meets-skinning-awesomeness-of-less.html</id>
     <title>JSF meets Skinning Awesomeness of LESS</title>
-    <updated>2013-01-15T23:27:24+01:00</updated>
+    <updated>2013-01-15T23:53:08+01:00</updated>
     <published>2012-08-03T00:00:00Z</published>
     <link href='http://lukas.fryc.eu/blog/2012/08/jsf-meets-skinning-awesomeness-of-less.html' rel='alternate' type='text/html' />
     <category term='richfaces'></category>
@@ -88,9 +410,107 @@ That&#8217;s exactly where technologies like LESS and SASS come in. They are pro
     </content>
   </entry>
   <entry>
+    <id>http://lukas.fryc.eu/blog/2012/05/arquillian-extension-warp-1.html</id>
+    <title>Warp 1.0.0.Alpha1 Released</title>
+    <updated>2013-01-16T00:09:25+01:00</updated>
+    <published>2012-05-27T00:00:00Z</published>
+    <link href='http://lukas.fryc.eu/blog/2012/05/arquillian-extension-warp-1.html' rel='alternate' type='text/html' />
+    <category term='arquillian'></category>
+    <category term='warp'></category>
+    <summary>
+      
+      	Have you ever wanted to test a web application using real HTTP requests, but still have the opportunity to verify server-side state and behavior?
+      	Wouldn&#8217;t it be great to have the full power of Arquillian Drone, driving Selenium or WebDriver on the client, then combine that with an Arquillian in-container test?
+      
+      Now you can!
+      Ike&#8217;s innovative army has created yet another powerful weapon for your testing arsenal, Arquillian Warp.
+      Testing on both sides of the request
+      Arquillian Warp fills the void between client-side and server-side testing. Using Warp, you can initiate an HTTP request using a client-side testing tool such as WebDriver and, in the...
+    </summary>
+    <content type='html'>
+      &lt;ul&gt;
+	&lt;li&gt;Have you ever wanted to test a web application using &lt;em&gt;real&lt;/em&gt; &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; requests, but still have the opportunity to verify &lt;em&gt;server-side&lt;/em&gt; state and behavior?&lt;/li&gt;
+	&lt;li&gt;Wouldn&amp;#8217;t it be great to have the full power of Arquillian Drone, driving Selenium or WebDriver on the client, then combine that with an Arquillian in-container test?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Now you can!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ike&amp;#8217;s innovative army has created yet another powerful weapon for your testing arsenal, Arquillian Warp.&lt;/p&gt;
+&lt;h3&gt;Testing on both sides of the request&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Arquillian Warp fills the void between client-side and server-side testing.&lt;/strong&gt; Using Warp, you can initiate an &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; request using a client-side testing tool such as WebDriver and, &lt;em&gt;in the same request cycle&lt;/em&gt;, execute in-container server-side tests. This powerful combination lets you cover integration across client and server.&lt;/p&gt;
+&lt;p&gt;Now you can send &lt;em&gt;real&lt;/em&gt; requests that execute &lt;em&gt;real&lt;/em&gt; application logic and render content in a &lt;em&gt;real&lt;/em&gt; browser and test it &lt;em&gt;end-to-end&lt;/em&gt;. Mocks? Who needs those? Imagine the debugging possibilities this opens up!&lt;/p&gt;
+&lt;p&gt;This may sound like sci-fi, but it&amp;#8217;s a reality. &lt;strong&gt;It&amp;#8217;s advanced alien technology for killing real bugs that you can get your hands on today!&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;Let&amp;#8217;s warp to the code&lt;/h3&gt;
+&lt;p&gt;We&amp;#8217;ll start with a normal Arquillian Drone client-side test with one enhancement, a &lt;code&gt;@WarpTest&lt;/code&gt; annotation on the test class. This extra annotation instructs Arquillian Warp to enhance the request.&lt;/p&gt;
+&lt;pre class=&quot;prettify&quot;&gt;&lt;code class=&quot;prettify&quot;&gt;@WarpTest&amp;#x000A;@RunWith(Arquillian.class)&amp;#x000A;public class BasicWarpTest {&amp;#x000A;    @Drone&amp;#x000A;    WebDriver browser;&lt;/code&gt;&amp;#x000A;&amp;#x000A;&lt;code class=&quot;prettify&quot;&gt;    @ArquillianResource&amp;#x000A;    URL contextPath;&lt;/code&gt;&amp;#x000A;&amp;#x000A;&lt;code class=&quot;prettify&quot;&gt;    @Deployment&amp;#x000A;    public static WebArchive createDeployment() { ... }&lt;/code&gt;&amp;#x000A;&amp;#x000A;&lt;code class=&quot;prettify&quot;&gt;    @Test&amp;#x000A;    @RunAsClient&amp;#x000A;    public void test_initial_page() {&amp;#x000A;        // triggers a HTTP request to a server&amp;#x000A;        browser.navigate().to(contextPath);&amp;#x000A;        // stay tuned...&amp;#x000A;    }&amp;#x000A;}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that you can use &lt;em&gt;any &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; client&lt;/em&gt;. For the sake of simplicity we&amp;#8217;ve used &lt;code&gt;@Drone&lt;/code&gt; to hook WebDriver (Selenium 2) into our test. Additionally, we&amp;#8217;ve declared a web archive to be tested and injected its &lt;span class=&quot;caps&quot;&gt;URL&lt;/span&gt; into the test case.&lt;/p&gt;
+&lt;p&gt;So far, we&amp;#8217;ve defined a basic Drone test. Let&amp;#8217;s start to warp this test so we can use it to test server-side logic as well. We begin by defining an implementation of &lt;code&gt;ServerAssertion&lt;/code&gt; as an inner class of the test:&lt;/p&gt;
+&lt;pre class=&quot;prettify&quot;&gt;&lt;code class=&quot;prettify&quot;&gt;public static class InitialRequestAssertion extends ServerAssertion {&amp;#x000A;    @Inject&amp;#x000A;    TowelBean towel;&lt;/code&gt;&amp;#x000A;&amp;#x000A;&lt;code class=&quot;prettify&quot;&gt;    @AfterPhase(RENDER_RESPONSE)&amp;#x000A;    public void test_initial_state() {&amp;#x000A;        // verify we are on right viewId&amp;#x000A;        assertEquals(&quot;/index.xhtml&quot;, FacesContext.getCurrentInstance().getViewRoot().getViewId());&lt;/code&gt;&amp;#x000A;&amp;#x000A;&lt;code class=&quot;prettify&quot;&gt;        // assert the bean state&amp;#x000A;        assertNull(42, towelBean.getAnswerToLife());&amp;#x000A;    }&amp;#x000A;}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An object of this assertion class will be later enriched on the server (i.e., &lt;code&gt;TowelBean&lt;/code&gt; will be injected) and then the lifecycle method annotated with &lt;code&gt;@AfterPhase&lt;/code&gt; will be invoked in an appropriate phase of the request (after the response is rendered in the &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt; lifecycle). This lifecycle method is effectively our server-side test.&lt;/p&gt;
+&lt;p&gt;All we need to do now is hook this assertion class to the request that is initiated by the browser. To do that, we warp the Selenium call in a Warp action:&lt;/p&gt;
+&lt;pre class=&quot;prettify&quot;&gt;&lt;code class=&quot;prettify&quot;&gt;@Test&amp;#x000A;@RunAsClient&amp;#x000A;public void test_initial_page() {&amp;#x000A;    // define the client action which will lead to HTTP request&amp;#x000A;    Warp.execute(new ClientAction() {&amp;#x000A;        public void action() {&amp;#x000A;            // the original request&amp;#x000A;            browser.navigate().to(contextPath);&amp;#x000A;        }&lt;/code&gt;&amp;#x000A;    &amp;#x000A;&lt;code class=&quot;prettify&quot;&gt;    // enhance the subsequent HTTP request with ServerAssertion&amp;#x000A;    }).verify(new InitialRequestAssertion());&amp;#x000A;}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That&amp;#8217;s it! Here&amp;#8217;s how it plays out:&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;The Selenium-controlled browser initiates an &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; request&lt;/li&gt;
+	&lt;li&gt;The request is trapped and enhanced with the &lt;code&gt;InitialRequestAssertion&lt;/code&gt; object (which gets added as a payload of the request)&lt;/li&gt;
+	&lt;li&gt;When the request arrives at the server, the &lt;code&gt;InitialRequestAssertion&lt;/code&gt; assertion object is registered with Arquillian and the request lifecycle proceeds&lt;/li&gt;
+	&lt;li&gt;After the response is rendered on the server, the &lt;code&gt;InitialRequestAssertion&lt;/code&gt; object is enriched with all the required resources (&lt;span class=&quot;caps&quot;&gt;EJB&lt;/span&gt; beans, &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; beans, Spring beans or Arquillian resources) and the lifecycle (test) method is invoked&lt;/li&gt;
+	&lt;li&gt;Once the request is complete, the &lt;code&gt;InitialRequestAssertion&lt;/code&gt; object is sent back to the client&lt;/li&gt;
+	&lt;li&gt;If anything on the server-side failed (including assertions you defined), the failure is propagated back to the client and handled as a test failure&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Currently, Warp supports lifecycle callbacks for the Servlet and &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt; lifecycles, but it&amp;#8217;s designed to be able to handle any server-side lifecycle.&lt;/p&gt;
+&lt;h3&gt;Some of the highlights in this release&lt;/h3&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Support for Servlet events&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;Warp gives you the ability to test any Servlet lifecycle with these two lifecycle annotations:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;@BeforeServlet&lt;/code&gt; &amp;#8211; triggered before the request is processed by the Servlet&lt;br /&gt;
+&lt;code&gt;@AfterServlet&lt;/code&gt; &amp;#8211; triggered after the request is processed by the Servlet&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Support for &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt; lifecycle events (Phaser extension)&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;Warp&amp;#8217;s Phaser extension provides integration with the &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt; lifecycle. You can use these lifecycle annotations to test the application in any &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt; phase:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;@BeforePhase(Phase)&lt;/code&gt; &amp;#8211; triggered before the given &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt; phase is executed&lt;br /&gt;
+&lt;code&gt;@AfterPhase(Phase)&lt;/code&gt; &amp;#8211; triggered after the given &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt; phase is executed&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Compatible with any &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; client&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;Warp works with any &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; client: Selenium, HtmlUnit, HttpUnit, &lt;span class=&quot;caps&quot;&gt;REST&lt;/span&gt; client, JavaScript test, Android device. No boundaries here!&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Open to more protocols&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;Only the &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; protocol is supported currently, but other protocols can be supported as well! (An &lt;span class=&quot;caps&quot;&gt;SPI&lt;/span&gt; will be defined in a later releases)&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+	&lt;dt&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt; Open to more frameworks&lt;/dt&gt;
+	&lt;dd&gt;&lt;p&gt;Warp is designed to support any server-side web framework based on the Servlets &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h3&gt;Need to know more?&lt;/h3&gt;
+&lt;p&gt;You can find the complete Maven-based sample usage in the &lt;a href=&quot;https://github.com/arquillian/arquillian-showcase/tree/master/warp&quot;&gt;Arquillian Showcase&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Additionally, you can look at the functional tests in the Warp test suite:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;https://github.com/arquillian/arquillian-extension-warp/blob/1.0.0.Alpha1/ftest/src/test/java/org/jboss/arquillian/warp/ftest/WarpBasicTest.java&quot;&gt;Servlet integration&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;https://github.com/arquillian/arquillian-extension-warp/blob/1.0.0.Alpha1/extension/phaser-ftest/src/test/java/org/jboss/arquillian/warp/extension/phaser/ftest/PhaserBasicTest.java&quot;&gt;Phaser (&lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt;) integration&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Roadmap&lt;/h3&gt;
+&lt;p&gt;In future releases, we&amp;#8217;ll be looking into further improving the extension, most notably by providing framework-specific enrichments:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Injectable &lt;code&gt;HttpServletRequest&lt;/code&gt;&lt;/li&gt;
+	&lt;li&gt;Injectable &lt;code&gt;FacesContext&lt;/code&gt;&lt;/li&gt;
+	&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Warp offers many possibilities for integration:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Support for wide range of &lt;strong&gt;server-side web frameworks&lt;/strong&gt; (Wicket, Vaadin, &lt;span class=&quot;caps&quot;&gt;GWT&lt;/span&gt;, Tapestry, &amp;#8230;)&lt;/li&gt;
+	&lt;li&gt;Support for &lt;strong&gt;alternative protocols&lt;/strong&gt; (WebSockets)&lt;/li&gt;
+	&lt;li&gt;Built-in support for variety of &lt;strong&gt;client-side testing tools&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Call to action&lt;/h3&gt;
+&lt;p&gt;If you would like to have support for your favorite web framework, you see features that are missing or you can see room for improvement, don&amp;#8217;t hesitate and come to the &amp;#8220;Arquillian forums&amp;#8221;: or the # channel on Freenode &lt;span class=&quot;caps&quot;&gt;IRC&lt;/span&gt;!&lt;/p&gt;
+&lt;p&gt;We would love to hear your ideas and feedback for how to stretch Warp to reach beyond the boundaries of the test galaxy!&lt;/p&gt;
+    </content>
+  </entry>
+  <entry>
     <id>http://lukas.fryc.eu/blog/2012/05/in-foothills-of-alps-wrap-up-of-confess.html</id>
     <title>In the foothills of Alps - wrap-up of ConFess 2012</title>
-    <updated>2013-01-15T23:49:09+01:00</updated>
+    <updated>2013-01-15T23:53:08+01:00</updated>
     <published>2012-05-14T00:00:00Z</published>
     <link href='http://lukas.fryc.eu/blog/2012/05/in-foothills-of-alps-wrap-up-of-confess.html' rel='alternate' type='text/html' />
     <category term='event'></category>
@@ -121,7 +541,7 @@ That&#8217;s exactly where technologies like LESS and SASS come in. They are pro
   <entry>
     <id>http://lukas.fryc.eu/blog/2012/04/graphene-100final-released.html</id>
     <title>Graphene 1.0.0.Final Released</title>
-    <updated>2013-01-15T23:49:04+01:00</updated>
+    <updated>2013-01-15T23:53:08+01:00</updated>
     <published>2012-04-11T00:00:00Z</published>
     <link href='http://lukas.fryc.eu/blog/2012/04/graphene-100final-released.html' rel='alternate' type='text/html' />
     <category term='arquillian'></category>
@@ -157,7 +577,7 @@ That&#8217;s exactly where technologies like LESS and SASS come in. They are pro
   <entry>
     <id>http://lukas.fryc.eu/blog/2012/04/full-fledged-debugging-for-mobile.html</id>
     <title>Full-Fledged Debugging for Mobile Browsers</title>
-    <updated>2013-01-15T23:49:00+01:00</updated>
+    <updated>2013-01-15T23:53:08+01:00</updated>
     <published>2012-04-04T00:00:00Z</published>
     <link href='http://lukas.fryc.eu/blog/2012/04/full-fledged-debugging-for-mobile.html' rel='alternate' type='text/html' />
     <category term='debugging'></category>
@@ -192,7 +612,7 @@ WebKit Web...
   <entry>
     <id>http://lukas.fryc.eu/blog/2012/03/incredibly-fast-jsf-component.html</id>
     <title>Incredibly Fast JSF Component Development</title>
-    <updated>2013-01-15T23:48:53+01:00</updated>
+    <updated>2013-01-15T23:53:08+01:00</updated>
     <published>2012-03-29T00:00:00Z</published>
     <link href='http://lukas.fryc.eu/blog/2012/03/incredibly-fast-jsf-component.html' rel='alternate' type='text/html' />
     <category term='richfaces'></category>
@@ -238,7 +658,7 @@ WebKit Web...
   <entry>
     <id>http://lukas.fryc.eu/blog/2012/03/goodbye-ajocado-welcome-graphene.html</id>
     <title>Goodbye, Ajocado - Welcome, Graphene!</title>
-    <updated>2013-01-15T23:48:45+01:00</updated>
+    <updated>2013-01-15T23:53:08+01:00</updated>
     <published>2012-03-19T00:00:00Z</published>
     <link href='http://lukas.fryc.eu/blog/2012/03/goodbye-ajocado-welcome-graphene.html' rel='alternate' type='text/html' />
     <category term='arquillian'></category>
@@ -282,7 +702,7 @@ The project is like a&amp;nbsp;diamond&amp;nbsp;- very strong in its basis:&lt;/
   <entry>
     <id>http://lukas.fryc.eu/blog/2012/03/great-times-at-jdc-2012-egypt.html</id>
     <title>Great times at JDC 2012, Egypt</title>
-    <updated>2013-01-15T23:48:40+01:00</updated>
+    <updated>2013-01-15T23:53:08+01:00</updated>
     <published>2012-03-13T00:00:00Z</published>
     <link href='http://lukas.fryc.eu/blog/2012/03/great-times-at-jdc-2012-egypt.html' rel='alternate' type='text/html' />
     <category term='wrap-up'></category>
@@ -326,7 +746,7 @@ After the conference closing, the good beer and the nice mood over the discussio
   <entry>
     <id>http://lukas.fryc.eu/blog/2012/03/speaking-at-jdc12-in-cairo-egypt.html</id>
     <title>Speaking at JDC'12 in Cairo, Egypt</title>
-    <updated>2013-01-15T23:48:35+01:00</updated>
+    <updated>2013-01-15T23:53:08+01:00</updated>
     <published>2012-03-05T00:00:00Z</published>
     <link href='http://lukas.fryc.eu/blog/2012/03/speaking-at-jdc12-in-cairo-egypt.html' rel='alternate' type='text/html' />
     <category term='event'></category>
@@ -358,7 +778,7 @@ After the conference closing, the good beer and the nice mood over the discussio
   <entry>
     <id>http://lukas.fryc.eu/blog/2012/02/wrap-up-arquillian-hackfest-developer.html</id>
     <title>Wrap-up: Arquillian Hackfest @ Developer Conference 2012 Brno</title>
-    <updated>2013-01-15T23:48:29+01:00</updated>
+    <updated>2013-01-15T23:53:08+01:00</updated>
     <published>2012-02-24T00:00:00Z</published>
     <link href='http://lukas.fryc.eu/blog/2012/02/wrap-up-arquillian-hackfest-developer.html' rel='alternate' type='text/html' />
     <category term='hackfest'></category>
@@ -396,7 +816,7 @@ After the conference closing, the good beer and the nice mood over the discussio
   <entry>
     <id>http://lukas.fryc.eu/blog/2012/02/re-routing-jsf-resource-requests-with.html</id>
     <title>Re-routing JSF resource requests with RichFaces Resource Mapping</title>
-    <updated>2013-01-15T23:48:16+01:00</updated>
+    <updated>2013-01-15T23:53:08+01:00</updated>
     <published>2012-02-13T00:00:00Z</published>
     <link href='http://lukas.fryc.eu/blog/2012/02/re-routing-jsf-resource-requests-with.html' rel='alternate' type='text/html' />
     <category term='richfaces'></category>
@@ -455,7 +875,7 @@ and resource dependencies (green)&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
   <entry>
     <id>http://lukas.fryc.eu/blog/2012/02/optimizing-resource-loading-with.html</id>
     <title>Optimizing Resource Loading with RichFaces 4.2</title>
-    <updated>2013-01-15T23:48:08+01:00</updated>
+    <updated>2013-01-15T23:53:08+01:00</updated>
     <published>2012-02-09T00:00:00Z</published>
     <link href='http://lukas.fryc.eu/blog/2012/02/optimizing-resource-loading-with.html' rel='alternate' type='text/html' />
     <category term='richfaces'></category>
@@ -518,7 +938,7 @@ Now, deploy and open your application. When you will open page source, you can s
   <entry>
     <id>http://lukas.fryc.eu/blog/2012/02/configuring-richfaces-push-with-42.html</id>
     <title>4 simple steps for RichFaces Push with 4.2</title>
-    <updated>2013-01-15T23:27:24+01:00</updated>
+    <updated>2013-01-15T23:53:08+01:00</updated>
     <published>2012-02-08T00:00:00Z</published>
     <link href='http://lukas.fryc.eu/blog/2012/02/configuring-richfaces-push-with-42.html' rel='alternate' type='text/html' />
     <category term='richfaces'></category>
@@ -582,25 +1002,9 @@ But it’s not simple &lt;span class=&quot;caps&quot;&gt;AJAX&lt;/span&gt;!&lt;/
     </content>
   </entry>
   <entry>
-    <id>http://lukas.fryc.eu/blog/2011/09/1-day-conference-in-vienna-slides-and.html</id>
-    <title>1-day conference in Vienna - Slides and Wrap up</title>
-    <updated>2013-01-15T23:47:53+01:00</updated>
-    <published>2011-09-20T00:00:00Z</published>
-    <link href='http://lukas.fryc.eu/blog/2011/09/1-day-conference-in-vienna-slides-and.html' rel='alternate' type='text/html' />
-    <category term='wrap-up'></category>
-    <summary>
-      Last event I have attended was a great success.
-      I have made two talks there for which I would like to share slides with you:RichFaces 4 rolling to Mobile Era (Slides | Lanyard)Testing JSF with Arquillian and Selenium (Slides | Lanyard)I had got very valuable feedback from attendees on both sessions, thank you!...
-    </summary>
-    <content type='html'>
-      &lt;p&gt;Last event I have attended was a great success.&lt;div /&gt;&lt;/p&gt;
-      &lt;p&gt;&lt;div&gt;I have made two talks there for which I would like to share slides with you:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;RichFaces 4 rolling to Mobile Era&lt;/b&gt; (&lt;a href=&quot;http://www.slideshare.net/lfryc/richfaces-4-rolling-to-mobile-era&quot;&gt;Slides&lt;/a&gt; | &lt;a href=&quot;http://lanyrd.com/2011/jsf-and-richfaces-workshop-conference/sgzmd/&quot;&gt;Lanyard&lt;/a&gt;)&lt;/li&gt;&lt;li&gt;&lt;b&gt;Testing &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt; with Arquillian and Selenium&lt;/b&gt; (&lt;a href=&quot;http://www.slideshare.net/lfryc/testing-jsf-with-arquillian-and-selenium&quot;&gt;Slides&lt;/a&gt; | &lt;a href=&quot;http://lanyrd.com/2011/jsf-and-richfaces-workshop-conference/sgzmf/&quot;&gt;Lanyard&lt;/a&gt;)&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;I had got very valuable feedback from attendees on both sessions, thank you!&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
-    </content>
-  </entry>
-  <entry>
     <id>http://lukas.fryc.eu/blog/2011/09/improvements-of-richfaces-editor-in.html</id>
     <title>Improvements of RichFaces Editor in Milestone2</title>
-    <updated>2013-01-15T23:27:24+01:00</updated>
+    <updated>2013-01-15T23:53:08+01:00</updated>
     <published>2011-09-20T00:00:00Z</published>
     <link href='http://lukas.fryc.eu/blog/2011/09/improvements-of-richfaces-editor-in.html' rel='alternate' type='text/html' />
     <category term='richfaces'></category>
@@ -632,9 +1036,25 @@ You can still switch to other skins available in default distribution of CKEdito
     </content>
   </entry>
   <entry>
+    <id>http://lukas.fryc.eu/blog/2011/09/1-day-conference-in-vienna-slides-and.html</id>
+    <title>1-day conference in Vienna - Slides and Wrap up</title>
+    <updated>2013-01-15T23:53:08+01:00</updated>
+    <published>2011-09-20T00:00:00Z</published>
+    <link href='http://lukas.fryc.eu/blog/2011/09/1-day-conference-in-vienna-slides-and.html' rel='alternate' type='text/html' />
+    <category term='wrap-up'></category>
+    <summary>
+      Last event I have attended was a great success.
+      I have made two talks there for which I would like to share slides with you:RichFaces 4 rolling to Mobile Era (Slides | Lanyard)Testing JSF with Arquillian and Selenium (Slides | Lanyard)I had got very valuable feedback from attendees on both sessions, thank you!...
+    </summary>
+    <content type='html'>
+      &lt;p&gt;Last event I have attended was a great success.&lt;div /&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;div&gt;I have made two talks there for which I would like to share slides with you:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;RichFaces 4 rolling to Mobile Era&lt;/b&gt; (&lt;a href=&quot;http://www.slideshare.net/lfryc/richfaces-4-rolling-to-mobile-era&quot;&gt;Slides&lt;/a&gt; | &lt;a href=&quot;http://lanyrd.com/2011/jsf-and-richfaces-workshop-conference/sgzmd/&quot;&gt;Lanyard&lt;/a&gt;)&lt;/li&gt;&lt;li&gt;&lt;b&gt;Testing &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt; with Arquillian and Selenium&lt;/b&gt; (&lt;a href=&quot;http://www.slideshare.net/lfryc/testing-jsf-with-arquillian-and-selenium&quot;&gt;Slides&lt;/a&gt; | &lt;a href=&quot;http://lanyrd.com/2011/jsf-and-richfaces-workshop-conference/sgzmf/&quot;&gt;Lanyard&lt;/a&gt;)&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;I had got very valuable feedback from attendees on both sessions, thank you!&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
+    </content>
+  </entry>
+  <entry>
     <id>http://lukas.fryc.eu/blog/2011/08/talking-on-richfacesmobiles-and-on-jsf.html</id>
     <title>Talking on RichFaces@mobiles and on JSF testing in Vienna</title>
-    <updated>2013-01-15T23:47:41+01:00</updated>
+    <updated>2013-01-15T23:53:08+01:00</updated>
     <published>2011-08-31T00:00:00Z</published>
     <link href='http://lukas.fryc.eu/blog/2011/08/talking-on-richfacesmobiles-and-on-jsf.html' rel='alternate' type='text/html' />
     <category term='event'></category>
@@ -656,7 +1076,7 @@ Looking forward to meet you there!...
   <entry>
     <id>http://lukas.fryc.eu/blog/2011/08/lot-of-improvements-has-been-done-in-4.html</id>
     <title>Push Improvements in RichFaces 4.1</title>
-    <updated>2013-01-15T23:47:32+01:00</updated>
+    <updated>2013-01-15T23:53:08+01:00</updated>
     <published>2011-08-18T00:00:00Z</published>
     <link href='http://lukas.fryc.eu/blog/2011/08/lot-of-improvements-has-been-done-in-4.html' rel='alternate' type='text/html' />
     <category term='richfaces'></category>
@@ -688,7 +1108,7 @@ Looking forward to meet you there!...
   <entry>
     <id>http://lukas.fryc.eu/blog/2011/08/editor-for-richfaces-41.html</id>
     <title>Editor for RichFaces 4.1</title>
-    <updated>2013-01-15T23:47:21+01:00</updated>
+    <updated>2013-01-15T23:53:08+01:00</updated>
     <published>2011-08-15T00:00:00Z</published>
     <link href='http://lukas.fryc.eu/blog/2011/08/editor-for-richfaces-41.html' rel='alternate' type='text/html' />
     <category term='richfaces'></category>
@@ -719,7 +1139,7 @@ It also integrates nicely with rest of JSF 2, thus you can bind e.g. behavior fo
   <entry>
     <id>http://lukas.fryc.eu/blog/2011/07/richfaces-heading-to-jboss-as7-era.html</id>
     <title>RichFaces Heading to JBoss AS7 Era</title>
-    <updated>2013-01-15T23:46:59+01:00</updated>
+    <updated>2013-01-15T23:53:08+01:00</updated>
     <published>2011-07-19T00:00:00Z</published>
     <link href='http://lukas.fryc.eu/blog/2011/07/richfaces-heading-to-jboss-as7-era.html' rel='alternate' type='text/html' />
     <category term='richfaces'></category>
