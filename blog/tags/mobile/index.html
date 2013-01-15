@@ -5,10 +5,10 @@
     <title>Lukas Fryc</title>
     <meta content='width=device-width, initial-scale=1.0' name='viewport' />
     <link href='http://lukas.fryc.eu/feed.atom' rel='alternate' title='Blog Feed' type='application/atom+xml' />
-    <link href='http://lukas.fryc.eu/stylesheets/styles.css' rel='stylesheet' type='text/css' />
+    <link href='http://lukas.fryc.eu/stylesheets/bootstrap.min.css' rel='stylesheet' type='text/css' />
+    <link href='http://lukas.fryc.eu/stylesheets/bootstrap-responsive.min.css' rel='stylesheet' type='text/css' />
+    <link href='http://lukas.fryc.eu/stylesheets/my.css' rel='stylesheet' type='text/css' />
     <link href='http://lukas.fryc.eu/stylesheets/google-code-prettify/prettify.css' rel='stylesheet' type='text/css' />
-    <link href='http://lukas.fryc.eu/stylesheets/theme.css' rel='stylesheet' type='text/css' />
-    <link href='http://lukas.fryc.eu/stylesheets/blog.css' rel='stylesheet' type='text/css' />
     <style type='text/css'>
       /*<![CDATA[*/
         .navbar-inner {
@@ -28,20 +28,14 @@
     </script>
   </head>
   <body>
-    <div class='navbar'>
+    <div class='navbar navbar-fixed-top'>
       <div class='navbar-inner'>
         <div class='container'>
-          <a class='brand' href='http://lukas.fryc.eu'>Lukáš Fryč</a>
+          <a class='btn btn-navbar' data-='.nav-collapse' data-toggle='collapse'></a>
+          <a class='brand' href='http://lukas.fryc.eu'>~ lfryc</a>
           <ul class='nav'>
             <li>
               <a href='http://lukas.fryc.eu'>Home</a>
-            </li>
-          </ul>
-          <ul class='nav pull-right'>
-            <li>
-              <a class='subscribe' href='/feed.atom' title='Subscribe'>
-                <img src='/images/rss_32.png' />
-              </a>
             </li>
           </ul>
         </div>
@@ -51,422 +45,262 @@
       <div class='row'>
         <div class='span9'>
   <div id='content'>
+  <header class='jumbotron subhead page-header'>
+    <h1>Lukas Fryc</h1>
+    <p>Java EE, Testing, Fast Turnaround</p>
+  </header>
   <div class='post'>
-    <h6>Wednesday, April 4, 2012</h6>
-    <h2 class='title'>
+    <h4 class='title post-title'>
       <a href='/blog/2012/04/full-fledged-debugging-for-mobile.html'>Full-Fledged Debugging for Mobile Browsers</a>
-    </h2>
-    <p>A debugging of desktop applications is very common task in the world of web development. We might say the tooling here is highly developed and you can find everything you require and pretty easily. You can just use all those Firebugs, Chrome Web Inspectors, IE Developers Tools, etc.</p>
-<p>Not so in world of mobile devices!</p>
-<h2>Hard Time Debugging Web Apps on Mobiles</h2>
-<p>The debugging applications on mobile were always problem &#8211; the mobile safari for iPhone/iPad offers you at least error console, so you might know when something is going wrong. The Android built-in browser does not even provide you such tool!</p>
-<h2>WebKit Web Inspector</h2>
-<p>But the WebKit based browsers has solution to this &#8211; they offers WebKit Web Inspector, which you might be familiar with from using Chrome/Safari.</p>
-<p>Fortunately, WebKit functionality has arrived to mobile browsers yet!</p>
-<h2>Inspector for Safari / iPhone</h2>
-<p>From little bit of search, I have found Safari was enabled to <a href="http://www.webkit.org/blog/1620/webkit-remote-debugging/">use remote debugging bridge</a> year ago!</p>
-<h2>Inspector for Chrome Beta / Android</h2>
-<p>But as Ubuntu/Android user, I wasn&#8217;t able to use such a comfort.&nbsp;Until now!</p>
-<p>I have upgraded my <span class="caps">HTC</span> to Android 4 yesterday and the Chrome Beta was the first application I installed there (it isn&#8217;t available for previous Android releases).</p>
-<p>Today I have dived into RichFaces issue which&nbsp;occurred&nbsp;on mobiles. What a pain it could be when trying to find the cause, since mobile browsers doesn&#8217;t even provide you the exact line where JavaScript error has&nbsp;occurred.</p>
-<p>And guess what? Chrome Beta already allows the same like Safari &#8211; WebKit Web Inspector through the <span class="caps">USB</span> debugging bridge.</p>
-<h2>How To&#8230;</h2>
-<p>The process is quite straight-forward:</p>
-<ul style="text-align: left;"><li><a href="http://developer.android.com/guide/developing/device.html">setup the <span class="caps">USB</span> debugging</a></li><ul><li>let&#8217;s start from step 2 &#8211; Turn on &#8220;<span class="caps">USB</span> Debugging&#8221; on your device.</li><li>for Ubuntu users, one additional step is required which involves registration device into udev system (described in the link above)</li><p></ul><li><a href="https://developers.google.com/chrome/mobile/docs/debugging">enable <span class="caps">USB</span> web debugging in Chrome Beta</a>&nbsp;</li><ul><li>involving installation of Android <span class="caps">SDK</span></li></ul></ul></p>
-    <div style='clear:both'></div>
+    </h4>
+    <h6>April 4, 2012</h6>
+    <p>A debugging of desktop applications is very common task in the world of web development. We might say the tooling here is highly developed and you can find everything you require and pretty easily...</p>
     <div class='tags'>
-      <span class='title'>
-        tags:
-      </span>
+      <span class='title'></span>
       <a href='/blog/tags/debugging'>
-        debugging,
+        <span class='badge'>debugging</span>
       </a>
       <a href='/blog/tags/mobile'>
-        mobile
-      </a>
-    </div>
-    <hr />
-  </div>
-  <div class='post'>
-    <h6>Tuesday, September 20, 2011</h6>
-    <h2 class='title'>
-      <a href='/blog/2011/09/1-day-conference-in-vienna-slides-and.html'>1-day conference in Vienna - Slides and Wrap up</a>
-    </h2>
-    <p>Last event I have attended was a great success.<div></p>
-    <p></div><div>I have made two talks there for which I would like to share slides with you:</div><div><ul><li><b>RichFaces 4 rolling to Mobile Era</b> (<a href="http://www.slideshare.net/lfryc/richfaces-4-rolling-to-mobile-era">Slides</a> | <a href="http://lanyrd.com/2011/jsf-and-richfaces-workshop-conference/sgzmd/">Lanyard</a>)</li><li><b>Testing <span class="caps">JSF</span> with Arquillian and Selenium</b> (<a href="http://www.slideshare.net/lfryc/testing-jsf-with-arquillian-and-selenium">Slides</a> | <a href="http://lanyrd.com/2011/jsf-and-richfaces-workshop-conference/sgzmf/">Lanyard</a>)</li></ul><div>I had got very valuable feedback from attendees on both sessions, thank you!</div></div></p>
-    <div style='clear:both'></div>
-    <div class='tags'>
-      <span class='title'>
-        tags:
-      </span>
-      <a href='/blog/tags/mobile'>
-        mobile,
-      </a>
-      <a href='/blog/tags/arquillian'>
-        arquillian,
-      </a>
-      <a href='/blog/tags/jsfunit'>
-        jsfunit,
-      </a>
-      <a href='/blog/tags/richfaces'>
-        richfaces,
-      </a>
-      <a href='/blog/tags/testing'>
-        testing,
-      </a>
-      <a href='/blog/tags/selenium'>
-        selenium
-      </a>
-    </div>
-    <hr />
-  </div>
-  <div class='post'>
-    <h6>Wednesday, August 31, 2011</h6>
-    <h2 class='title'>
-      <a href='/blog/2011/08/talking-on-richfacesmobiles-and-on-jsf.html'>Talking on RichFaces@mobiles and on JSF testing in Vienna</a>
-    </h2>
-    <p>I would like to invite you on <b><a href="http://www.objective.de/en/newspress/uniqa-workshop/"><span class="caps">JSF</span> and RichFaces workshop <span class="caps">UNIQA</span></a></b> held at September 7-9th in Vienna, Austria.</p>
-<p>While first two days will be <a href="http://mkblog.exadel.com/2011/08/jsfrichfaces-workshop-plus-1-day-conference-in-vienna-austria-sept-7-9/">Max Katz covering thoroughly <span class="caps">JSF</span> and RichFaces</a>, last conference day will be dedicated to topics related to RichFaces.</p>
-<p>I will be presenting on what can <b>RichFaces offer in upcoming mobile era</b> and what are current <b>state-of-art techniques in testing <span class="caps">JSF</span> applications</b> with Arquillian, Selenium and JSFUnit.</p>
-<p>You can also see <a href="http://www.objective.de/en/newspress/uniqa-workshop/programm/">detailed program</a> and you can watch the <a href="http://lanyrd.com/2011/jsf-and-richfaces-workshop-conference/">event on Lanyard</a>.</p>
-<p>Looking forward to meet you there!</p>
-    <div style='clear:both'></div>
-    <div class='tags'>
-      <span class='title'>
-        tags:
-      </span>
-      <a href='/blog/tags/event'>
-        event,
-      </a>
-      <a href='/blog/tags/mobile'>
-        mobile,
-      </a>
-      <a href='/blog/tags/arquillian'>
-        arquillian,
-      </a>
-      <a href='/blog/tags/jsfunit'>
-        jsfunit,
-      </a>
-      <a href='/blog/tags/richfaces'>
-        richfaces,
-      </a>
-      <a href='/blog/tags/selenium'>
-        selenium,
-      </a>
-      <a href='/blog/tags/workshop'>
-        workshop
+        <span class='badge'>mobile</span>
       </a>
     </div>
     <hr />
   </div>
   <div class='pagination' style='text-align: center'>
     <ul>
-      <li class='disabled'>
-        <a href='#'>
-          <span class='icon-fast-backward'></span>
-        </a>
-      </li>
-      <li class='disabled'>
-        <a href='#'>
-          <span class='icon-step-backward'></span>
-        </a>
-      </li>
       <li class='active'>
-        <a href='#'>1 of 1</a>
-      </li>
-      <li class='disabled'>
-        <a href='#'>
-          <span class='icon-step-forward'></span>
-        </a>
-      </li>
-      <li class='disabled'>
-        <a href='#'>
-          <span class='icon-fast-forward'></span>
-        </a>
+        <a href='#'>1</a>
       </li>
     </ul>
   </div>
 </div>
 </div>
 <div class='span3'>
-  <div id='sidebar'>
-    <div class='about'>
-      <div class='title'>about me</div>
-      <img src='/images/lfryc.jpg' />
-      <div class='name'>Lukáš Fryč</div>
-      <div class='details'>
-        <ul>
-          <li>Software Engineer at JBoss, by Red hat</li>
-          <li>RichFaces Core Developer</li>
-          <li>Arquillian Extensions Lead for Warp and Graphene</li>
-        </ul>
-      </div>
-    </div>
-    <hr />
-    <div class='title'>Blog Archive</div>
-    <div class='archive'>
-      <ul id='years'>
-        <li class='year' id='year_2012'>
-          <a data-parent='#years' data-target='#year_2012 &gt; ul.year' data-toggle='collapse' href='#2012'>
-            2012
-          </a>
-          <ul class='year collapse'>
-            <li class='month' id='month_8_2012'>
+  <div class='well' id='sidebar'>
+    <ul class='nav nav-list'>
+      <li class='nav-header'>About Me</li>
+      <li>
+        <img src='/images/lfryc.jpg' />
+      </li>
+      <li class='divider'></li>
+      <li>Lukáš Fryč</li>
+      <ul>
+        <li>Software Engineer</li>
+        <li>JBoss, by Red Hat</li>
+      </ul>
+      <li class='divider'></li>
+      <li class='years nav-header'>Blog Archive</li>
+      <li class='year' id='year_2012'>
+        <a data-target='#year_2012 &gt; ul.year' data-toggle='collapse' href='#2012'>
+          2012
+        </a>
+        <ul class='year collapse nav nav-list'>
+          <li class='month nav-header' id='month_8_2012'>
+            <a data-target='#month_8_2012 &gt; ul.month' data-toggle='collapse' href='#8_2012'>
               <span class='month'>August</span>
               <span class='count'>(2)</span>
-              <ul class='month'>
-                <li>
-                  <a href='/blog/2012/08/incremental-build-with-richfaces-cdk.html'>Incremental build with RichFaces CDK</a>
-                </li>
-                <li>
-                  <a href='/blog/2012/08/jsf-meets-skinning-awesomeness-of-less.html'>JSF meets Skinning Awesomeness of LESS</a>
-                </li>
-              </ul>
-            </li>
-            <li class='month' id='month_5_2012'>
+            </a>
+            <ul class='month nav nav-list collapse'>
+              <li>
+                <a href='/blog/2012/08/incremental-build-with-richfaces-cdk.html'>Incremental build with RichFaces CDK</a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a href='/blog/2012/08/jsf-meets-skinning-awesomeness-of-less.html'>JSF meets Skinning Awesomeness of LESS</a>
+              </li>
+              <li class='divider'></li>
+            </ul>
+          </li>
+          <li class='month nav-header' id='month_5_2012'>
+            <a data-target='#month_5_2012 &gt; ul.month' data-toggle='collapse' href='#5_2012'>
               <span class='month'>May</span>
               <span class='count'>(1)</span>
-              <ul class='month'>
-                <li>
-                  <a href='/blog/2012/05/in-foothills-of-alps-wrap-up-of-confess.html'>In the foothills of Alps - wrap-up of ConFess 2012</a>
-                </li>
-              </ul>
-            </li>
-            <li class='month' id='month_4_2012'>
+            </a>
+            <ul class='month nav nav-list collapse'>
+              <li>
+                <a href='/blog/2012/05/in-foothills-of-alps-wrap-up-of-confess.html'>In the foothills of Alps - wrap-up of ConFess 2012</a>
+              </li>
+              <li class='divider'></li>
+            </ul>
+          </li>
+          <li class='month nav-header' id='month_4_2012'>
+            <a data-target='#month_4_2012 &gt; ul.month' data-toggle='collapse' href='#4_2012'>
               <span class='month'>April</span>
               <span class='count'>(2)</span>
-              <ul class='month'>
-                <li>
-                  <a href='/blog/2012/04/graphene-100final-released.html'>Graphene 1.0.0.Final Released</a>
-                </li>
-                <li>
-                  <a href='/blog/2012/04/full-fledged-debugging-for-mobile.html'>Full-Fledged Debugging for Mobile Browsers</a>
-                </li>
-              </ul>
-            </li>
-            <li class='month' id='month_3_2012'>
+            </a>
+            <ul class='month nav nav-list collapse'>
+              <li>
+                <a href='/blog/2012/04/graphene-100final-released.html'>Graphene 1.0.0.Final Released</a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a href='/blog/2012/04/full-fledged-debugging-for-mobile.html'>Full-Fledged Debugging for Mobile Browsers</a>
+              </li>
+              <li class='divider'></li>
+            </ul>
+          </li>
+          <li class='month nav-header' id='month_3_2012'>
+            <a data-target='#month_3_2012 &gt; ul.month' data-toggle='collapse' href='#3_2012'>
               <span class='month'>March</span>
               <span class='count'>(4)</span>
-              <ul class='month'>
-                <li>
-                  <a href='/blog/2012/03/incredibly-fast-jsf-component.html'>Incredibly Fast JSF Component Development</a>
-                </li>
-                <li>
-                  <a href='/blog/2012/03/goodbye-ajocado-welcome-graphene.html'>Goodbye, Ajocado - Welcome, Graphene!</a>
-                </li>
-                <li>
-                  <a href='/blog/2012/03/great-times-at-jdc-2012-egypt.html'>Great times at JDC 2012, Egypt</a>
-                </li>
-                <li>
-                  <a href='/blog/2012/03/speaking-at-jdc12-in-cairo-egypt.html'>Speaking at JDC'12 in Cairo, Egypt</a>
-                </li>
-              </ul>
-            </li>
-            <li class='month' id='month_2_2012'>
+            </a>
+            <ul class='month nav nav-list collapse'>
+              <li>
+                <a href='/blog/2012/03/incredibly-fast-jsf-component.html'>Incredibly Fast JSF Component Development</a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a href='/blog/2012/03/goodbye-ajocado-welcome-graphene.html'>Goodbye, Ajocado - Welcome, Graphene!</a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a href='/blog/2012/03/great-times-at-jdc-2012-egypt.html'>Great times at JDC 2012, Egypt</a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a href='/blog/2012/03/speaking-at-jdc12-in-cairo-egypt.html'>Speaking at JDC'12 in Cairo, Egypt</a>
+              </li>
+              <li class='divider'></li>
+            </ul>
+          </li>
+          <li class='month nav-header' id='month_2_2012'>
+            <a data-target='#month_2_2012 &gt; ul.month' data-toggle='collapse' href='#2_2012'>
               <span class='month'>February</span>
               <span class='count'>(4)</span>
-              <ul class='month'>
-                <li>
-                  <a href='/blog/2012/02/wrap-up-arquillian-hackfest-developer.html'>Wrap-up: Arquillian Hackfest @ Developer Conference 2012 Brno</a>
-                </li>
-                <li>
-                  <a href='/blog/2012/02/re-routing-jsf-resource-requests-with.html'>Re-routing JSF resource requests with RichFaces Resource Mapping</a>
-                </li>
-                <li>
-                  <a href='/blog/2012/02/optimizing-resource-loading-with.html'>Optimizing Resource Loading with RichFaces 4.2</a>
-                </li>
-                <li>
-                  <a href='/blog/2012/02/configuring-richfaces-push-with-42.html'>4 simple steps for RichFaces Push with 4.2</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class='year' id='year_2011'>
-          <a data-parent='#years' data-target='#year_2011 &gt; ul.year' data-toggle='collapse' href='#2011'>
-            2011
-          </a>
-          <ul class='year collapse'>
-            <li class='month' id='month_9_2011'>
+            </a>
+            <ul class='month nav nav-list collapse'>
+              <li>
+                <a href='/blog/2012/02/wrap-up-arquillian-hackfest-developer.html'>Wrap-up: Arquillian Hackfest @ Developer Conference 2012 Brno</a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a href='/blog/2012/02/re-routing-jsf-resource-requests-with.html'>Re-routing JSF resource requests with RichFaces Resource Mapping</a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a href='/blog/2012/02/optimizing-resource-loading-with.html'>Optimizing Resource Loading with RichFaces 4.2</a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a href='/blog/2012/02/configuring-richfaces-push-with-42.html'>4 simple steps for RichFaces Push with 4.2</a>
+              </li>
+              <li class='divider'></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class='year' id='year_2011'>
+        <a data-target='#year_2011 &gt; ul.year' data-toggle='collapse' href='#2011'>
+          2011
+        </a>
+        <ul class='year collapse nav nav-list'>
+          <li class='month nav-header' id='month_9_2011'>
+            <a data-target='#month_9_2011 &gt; ul.month' data-toggle='collapse' href='#9_2011'>
               <span class='month'>September</span>
               <span class='count'>(2)</span>
-              <ul class='month'>
-                <li>
-                  <a href='/blog/2011/09/improvements-of-richfaces-editor-in.html'>Improvements of RichFaces Editor in Milestone2</a>
-                </li>
-                <li>
-                  <a href='/blog/2011/09/1-day-conference-in-vienna-slides-and.html'>1-day conference in Vienna - Slides and Wrap up</a>
-                </li>
-              </ul>
-            </li>
-            <li class='month' id='month_8_2011'>
+            </a>
+            <ul class='month nav nav-list collapse'>
+              <li>
+                <a href='/blog/2011/09/1-day-conference-in-vienna-slides-and.html'>1-day conference in Vienna - Slides and Wrap up</a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a href='/blog/2011/09/improvements-of-richfaces-editor-in.html'>Improvements of RichFaces Editor in Milestone2</a>
+              </li>
+              <li class='divider'></li>
+            </ul>
+          </li>
+          <li class='month nav-header' id='month_8_2011'>
+            <a data-target='#month_8_2011 &gt; ul.month' data-toggle='collapse' href='#8_2011'>
               <span class='month'>August</span>
               <span class='count'>(3)</span>
-              <ul class='month'>
-                <li>
-                  <a href='/blog/2011/08/talking-on-richfacesmobiles-and-on-jsf.html'>Talking on RichFaces@mobiles and on JSF testing in Vienna</a>
-                </li>
-                <li>
-                  <a href='/blog/2011/08/lot-of-improvements-has-been-done-in-4.html'>Push Improvements in RichFaces 4.1</a>
-                </li>
-                <li>
-                  <a href='/blog/2011/08/editor-for-richfaces-41.html'>Editor for RichFaces 4.1</a>
-                </li>
-              </ul>
-            </li>
-            <li class='month' id='month_7_2011'>
+            </a>
+            <ul class='month nav nav-list collapse'>
+              <li>
+                <a href='/blog/2011/08/talking-on-richfacesmobiles-and-on-jsf.html'>Talking on RichFaces@mobiles and on JSF testing in Vienna</a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a href='/blog/2011/08/lot-of-improvements-has-been-done-in-4.html'>Push Improvements in RichFaces 4.1</a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a href='/blog/2011/08/editor-for-richfaces-41.html'>Editor for RichFaces 4.1</a>
+              </li>
+              <li class='divider'></li>
+            </ul>
+          </li>
+          <li class='month nav-header' id='month_7_2011'>
+            <a data-target='#month_7_2011 &gt; ul.month' data-toggle='collapse' href='#7_2011'>
               <span class='month'>July</span>
               <span class='count'>(1)</span>
-              <ul class='month'>
-                <li>
-                  <a href='/blog/2011/07/richfaces-heading-to-jboss-as7-era.html'>RichFaces Heading to JBoss AS7 Era</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <hr />
-    <div class='title'>Tags</div>
-    <div class='tags'>
-      <div class='tag-cloud'>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/aerogear/'>aerogear</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/ajocado/'>ajocado</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/application-server/'>application-server</a>
-        </span>
-        <span class='tag tag-3'>
-          <a href='http://lukas.fryc.eu/blog/tags/arquillian/'>arquillian</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/as7/'>as7</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/atmosphere/'>atmosphere</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/cdi/'>cdi</a>
-        </span>
-        <span class='tag tag-2'>
-          <a href='http://lukas.fryc.eu/blog/tags/cdk/'>cdk</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/comet/'>comet</a>
-        </span>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/conference/'>conference</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/debugging/'>debugging</a>
-        </span>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/editor/'>editor</a>
-        </span>
-        <span class='tag tag-2'>
-          <a href='http://lukas.fryc.eu/blog/tags/event/'>event</a>
-        </span>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/forge/'>forge</a>
-        </span>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/graphene/'>graphene</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/gwt/'>gwt</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/hackfest/'>hackfest</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/javascript/'>javascript</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/jboss/'>jboss</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/jboss-as7/'>jboss-as7</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/jms/'>jms</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/jsf/'>jsf</a>
-        </span>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/jsfunit/'>jsfunit</a>
-        </span>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/jug/'>jug</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/less/'>less</a>
-        </span>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/mobile/'>mobile</a>
-        </span>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/performance/'>performance</a>
-        </span>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/push/'>push</a>
-        </span>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/resource-loading/'>resource-loading</a>
-        </span>
-        <span class='tag tag-6'>
-          <a href='http://lukas.fryc.eu/blog/tags/richfaces/'>richfaces</a>
-        </span>
-        <span class='tag tag-2'>
-          <a href='http://lukas.fryc.eu/blog/tags/selenium/'>selenium</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/showcase/'>showcase</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/testing/'>testing</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/tweetstream/'>tweetstream</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/websockets/'>websockets</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/workshop/'>workshop</a>
-        </span>
-      </div>
-    </div>
-    <hr />
-    <div class='title'>twitter updates</div>
-    <div class='tweet'>
-      <script type='text/javascript'>
-        //<![CDATA[
-          $(function() {
-            $(".tweet").tweet({
-              username: "lfryc",
-              avatar_size: 24,
-              count: 4,
-              template: "{text} {time}",
-              loading_text: "Loading tweets...",
-              outro_text: '<a class="btn"  href="https://twitter.com/#!/lfryc">Follow me on twitter</a>'
-            });
-          });
-        //]]>
-      </script>
-    </div>
-    <hr />
-    <div class='title'>Stack Overflow</div>
-    <a href='http://stackoverflow.com/users/1108684/lukas-fryc'>
-      <img alt='profile for Lukas Fryc at Stack Overflow, Q&amp;amp;A for professional and enthusiast programmers' height='58' src='http://stackoverflow.com/users/flair/1108684.png' title='profile for Lukas Fryc at Stack Overflow, Q&amp;amp;A for professional and enthusiast programmers' width='208' />
-    </a>
+            </a>
+            <ul class='month nav nav-list collapse'>
+              <li>
+                <a href='/blog/2011/07/richfaces-heading-to-jboss-as7-era.html'>RichFaces Heading to JBoss AS7 Era</a>
+              </li>
+              <li class='divider'></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class='divider'></li>
+      <li class='nav-header'>Tags</li>
+      <li>
+        <div class='tag-cloud'>
+          <span class='tag tag-1'>
+            <a href='http://lukas.fryc.eu/blog/tags/arquillian/'>arquillian</a>
+          </span>
+          <span class='tag tag-0'>
+            <a href='http://lukas.fryc.eu/blog/tags/as7/'>as7</a>
+          </span>
+          <span class='tag tag-0'>
+            <a href='http://lukas.fryc.eu/blog/tags/cdi/'>cdi</a>
+          </span>
+          <span class='tag tag-1'>
+            <a href='http://lukas.fryc.eu/blog/tags/cdk/'>cdk</a>
+          </span>
+          <span class='tag tag-0'>
+            <a href='http://lukas.fryc.eu/blog/tags/debugging/'>debugging</a>
+          </span>
+          <span class='tag tag-1'>
+            <a href='http://lukas.fryc.eu/blog/tags/editor/'>editor</a>
+          </span>
+          <span class='tag tag-2'>
+            <a href='http://lukas.fryc.eu/blog/tags/event/'>event</a>
+          </span>
+          <span class='tag tag-1'>
+            <a href='http://lukas.fryc.eu/blog/tags/graphene/'>graphene</a>
+          </span>
+          <span class='tag tag-0'>
+            <a href='http://lukas.fryc.eu/blog/tags/hackfest/'>hackfest</a>
+          </span>
+          <span class='tag tag-0'>
+            <a href='http://lukas.fryc.eu/blog/tags/less/'>less</a>
+          </span>
+          <span class='tag tag-0'>
+            <a href='http://lukas.fryc.eu/blog/tags/mobile/'>mobile</a>
+          </span>
+          <span class='tag tag-0'>
+            <a href='http://lukas.fryc.eu/blog/tags/performance/'>performance</a>
+          </span>
+          <span class='tag tag-1'>
+            <a href='http://lukas.fryc.eu/blog/tags/push/'>push</a>
+          </span>
+          <span class='tag tag-0'>
+            <a href='http://lukas.fryc.eu/blog/tags/resource-loading/'>resource-loading</a>
+          </span>
+          <span class='tag tag-6'>
+            <a href='http://lukas.fryc.eu/blog/tags/richfaces/'>richfaces</a>
+          </span>
+          <span class='tag tag-2'>
+            <a href='http://lukas.fryc.eu/blog/tags/wrap-up/'>wrap-up</a>
+          </span>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
-<script src='/javascripts/jquery-tweet.js' type='text/javascript'></script>
       </div>
       <div class='row'></div>
       <hr />

@@ -5,10 +5,10 @@
     <title>Lukas Fryc</title>
     <meta content='width=device-width, initial-scale=1.0' name='viewport' />
     <link href='http://lukas.fryc.eu/feed.atom' rel='alternate' title='Blog Feed' type='application/atom+xml' />
-    <link href='http://lukas.fryc.eu/stylesheets/styles.css' rel='stylesheet' type='text/css' />
+    <link href='http://lukas.fryc.eu/stylesheets/bootstrap.min.css' rel='stylesheet' type='text/css' />
+    <link href='http://lukas.fryc.eu/stylesheets/bootstrap-responsive.min.css' rel='stylesheet' type='text/css' />
+    <link href='http://lukas.fryc.eu/stylesheets/my.css' rel='stylesheet' type='text/css' />
     <link href='http://lukas.fryc.eu/stylesheets/google-code-prettify/prettify.css' rel='stylesheet' type='text/css' />
-    <link href='http://lukas.fryc.eu/stylesheets/theme.css' rel='stylesheet' type='text/css' />
-    <link href='http://lukas.fryc.eu/stylesheets/blog.css' rel='stylesheet' type='text/css' />
     <style type='text/css'>
       /*<![CDATA[*/
         .navbar-inner {
@@ -28,20 +28,14 @@
     </script>
   </head>
   <body>
-    <div class='navbar'>
+    <div class='navbar navbar-fixed-top'>
       <div class='navbar-inner'>
         <div class='container'>
-          <a class='brand' href='http://lukas.fryc.eu'>Lukáš Fryč</a>
+          <a class='btn btn-navbar' data-='.nav-collapse' data-toggle='collapse'></a>
+          <a class='brand' href='http://lukas.fryc.eu'>~ lfryc</a>
           <ul class='nav'>
             <li>
               <a href='http://lukas.fryc.eu'>Home</a>
-            </li>
-          </ul>
-          <ul class='nav pull-right'>
-            <li>
-              <a class='subscribe' href='/feed.atom' title='Subscribe'>
-                <img src='/images/rss_32.png' />
-              </a>
             </li>
           </ul>
         </div>
@@ -50,654 +44,283 @@
     <div class='container'>
       <div class='row'>
         <div class='span9'>
-  <div id='content'>
-  <div class='post'>
-    <h6>Monday, May 14, 2012</h6>
-    <h2 class='title'>
-      <a href='/blog/2012/05/in-foothills-of-alps-wrap-up-of-confess.html'>In the foothills of Alps - wrap-up of ConFess 2012</a>
-    </h2>
-    <div dir="ltr" style="text-align: left;" trbidi="on">
-<p>Last week, I have been in Austria at <b><a href="http://2012.con-fess.com/en/" target="_blank">ConFess conference</a></b>.</p>
-<p>From my perspective, the conference underwent two significant changes: the venue was moved to Leogang, Austria and at second I was speaking there. :-)</p>
-<p>For the first point, I really loved the place &#8211; I&#8217;m the big fan of hiking and alpinism, so I really enjoyed the moments when we were discussing outside the conference rooms, breathing the fresh air and admiring the beauties of surrounding nature.</p>
-<div class="separator" style="clear: both; text-align: center;"><a href="/images/blog/2012-05-14-in-foothills-of-alps-wrap-up-of-confess/IMG_0688.JPG" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="199" src="/images/blog/2012-05-14-in-foothills-of-alps-wrap-up-of-confess/IMG_0688.JPG" width="320" /></a></div>
-<p>At second it was really pleasure to speak at ConFess, as it is the first conference where I&#8217;ve ever been, and I like returning there.</p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://www.slideshare.net/lfryc/going-mobile-with-richfaces"><img border="0" height="150" src="/images/blog/2012-05-14-in-foothills-of-alps-wrap-up-of-confess/going-mobile.png" width="200" /></a></div>
-<p>My first talk was about latest movements in world of HTML5, what developers needs to consider and how <span class="caps">JSF</span> and RichFaces fit that story.</p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://www.slideshare.net/lfryc/designing-topclass-test-suites-for-web-applications"><img border="0" height="150" src="/images/blog/2012-05-14-in-foothills-of-alps-wrap-up-of-confess/designing-top-class-test-suites.png" width="200" /></a></div>
-<p>Second talk was structured as comprehensive guide to designing test suites for Java EE applications. I have revealed some of latest movements at planet Arquillian (like<a href="https://community.jboss.org/message/734599"> JSFUnit.NG</a> or <a href="http://blog.it-crowd.com.pl/2012/04/arquillian-meets-jrebel.html">JRebel extension</a>).</p>
-<blockquote class="tr_bq" style="text-align: center;"><span style="font-size: x-small;">Thanks to Jan Papousek who captured the photo.</span></div>
-    <div style='clear:both'></div>
-    <div class='tags'>
-      <span class='title'>
-        tags:
-      </span>
-      <a href='/blog/tags/event'>
-        event,
-      </a>
-      <a href='/blog/tags/arquillian'>
-        arquillian,
-      </a>
-      <a href='/blog/tags/richfaces'>
-        richfaces,
-      </a>
-      <a href='/blog/tags/selenium'>
-        selenium
-      </a>
-    </div>
-    <hr />
-  </div>
-  <div class='post'>
-    <h6>Wednesday, April 11, 2012</h6>
-    <h2 class='title'>
-      <a href='/blog/2012/04/graphene-100final-released.html'>Graphene 1.0.0.Final Released</a>
-    </h2>
-    <p>The Arquillian Graphene, the project focusing on <b>making a real-browser automation a breeze</b>, is now reaching first Final release.</p>
-<p>The Graphene is joining rest of the <b>Arquillian party</b>, building on top of Arquillian framework integration and Drone extension, which <a href="http://arquillian.org/blog/2012/04/10/arquillian-first-stable-release/">reached their stable version yesterday</a>.</p>
-<h2>The Mission</h2>
-<p>The project was started to address simplification of covering <span class="caps">AJAX</span>-enabled applications with browser automation tests.</p>
-<p>While Selenium project is focusing on unified <span class="caps">API</span>, integration with variety of browsers, Graphene project is addressing the real-world testing challenges:</div><div><ul style="text-align: left;"><li><b>rapid development</b></li><ul><li>straight-forward</li><li>readable <span class="caps">API</span></li><li>fast turnaround</li></ul><li><b>object-oriented</b></li><ul><li>type-safe <span class="caps">API</span></li><li>dependency injection of thread-local context</li></ul><li><b>instabilities</b> and <b>speed of execution</b> in continuous integration</li><ul><li>jQuery selectors</li><li>request guards</li></ul></ul></p>
-<h2>Availability</h2>
-<p>The Graphene bits are available in JBoss Maven repository, dual-licensed under <span class="caps">LGPL</span> v2.1 (backward-compatibility) and <span class="caps">ASL</span> v2.0 (which uses rest of the Arquillian sub-projects).</p>
-<p>For those who are already using the framework with Maven, you can simply increase the version to <span style="font-family: 'Courier New', Courier, monospace;">1.0.0.Final</span>.</div><div></p>
-<p></div><div>You can start with the tests using our <a href="https://docs.jboss.org/author/display/ARQGRA/Getting+Started">Getting StartJBoss Maven repositoryed guide</a>.</div></p>
-<h2>The Future</h2>
-<p>Right now we are heavily working on making the new version of Graphene 2 on the road.</p>
-<p>Selenium 2 with its <b>WebDriver <span class="caps">API</span></b> made huge progress with <span class="caps">API</span> <b>accessibility and readability</b> &#8211; it&#8217;s already pleasure to work with this <span class="caps">API</span> in Java world.</p>
-<p>However still there are <b>many lacks we are going to address with Graphene 2</b>, building on top of concepts brought in Graphene 1 and adding new features, which opens world of new possibilities:</p>
-<ul style="text-align: left;"><li>dependency injection of thread-local context</li><li>fast development turnaround</li><li>cross-cutting concerns (command interception)</li><li>request guards</li><li>page extensions</li><li>component objects</li><ul><li>extension of page objects concept</li><p></ul><li>JavaScript test execution from within Selenium test</li></ul><div>If you enjoy testing and you are unsatisfied with the current browser automation tooling, <b>it&#8217;s perfect time to step in</b> and help us to <b>bring the future</b>!</p>
-<h2>The Project Info</h2>
-<p>Source code:&nbsp;<a href="https://github.com/arquillian/arquillian-graphene">https://github.com/arquillian/arquillian-graphene</a></div><div>Documentation:&nbsp;<a href="https://docs.jboss.org/author/display/ARQGRA/Home">https://docs.jboss.org/author/display/<span class="caps">ARQGRA</span>/Home</a></div><div>Issue tracker:&nbsp;<a href="https://issues.jboss.org/browse/ARQGRA">https://issues.jboss.org/browse/<span class="caps">ARQGRA</span></a></p>
-    <div style='clear:both'></div>
-    <div class='tags'>
-      <span class='title'>
-        tags:
-      </span>
-      <a href='/blog/tags/arquillian'>
-        arquillian,
-      </a>
-      <a href='/blog/tags/graphene'>
-        graphene
-      </a>
-    </div>
-    <hr />
-  </div>
-  <div class='post'>
-    <h6>Monday, March 19, 2012</h6>
-    <h2 class='title'>
-      <a href='/blog/2012/03/goodbye-ajocado-welcome-graphene.html'>Goodbye, Ajocado - Welcome, Graphene!</a>
-    </h2>
-    <div dir="ltr" style="text-align: left;" trbidi="on"><div><span style="font-size: x-large;">Goodbye, Ajocado</span></div><div>
-<p></div><div>Wait, the Ajocado project is not leaving us!<br />
-It is just undergoing rename.&nbsp;Why such a change?</div><div></p>
-<p></div><div><b>Ajocado</b> was everytime proud member of <b>Arquillian</b> family, however its name didn&#8217;t tell very well what&#8217;s its purpose in the true alien world &#8211; the name didn&#8217;t fit the story.</div><div></p>
-<p></div><div>Moreover, we have experienced many troubles explaining how Ajocado should be even pronounced.</p>
-<p>I must admit it was unlucky choice.</div><div></p>
-<p></div><div><span style="font-size: x-large;">Choosing the new name&#8230;</span></div><div><br />
-The project is like a&nbsp;diamond&nbsp;- very strong in its basis:</div><div><ul style="text-align: left;"><li>a strongly-typed, chaining <span class="caps">API</span></li><li>efficient jQuery-based locators</li><li>proven to handle <span class="caps">AJAX</span> successfully</li></ul></div><div>But on the other hand, diamonds can&#8217;t be simply&nbsp;manufactured.</p>
-<p>Let&#8217;s look what more could Ajocado offer us:<br />
-<ul style="text-align: left;"><li>rapid test development</li><li>readability</li><li>high-level abstractions</li></ul><div>What can be as strong as diamond, but be much more flexible?</div><div></p>
-<p></div><div><span style="font-size: x-large;">Welcome, Graphene!</span></div><br />
-<blockquote class="tr_bq">Graphene is stronger and stiffer than diamond, yet can be stretched by a quarter of its length, like rubber.</div><div>Let me introduce the&nbsp;Graphene&nbsp;- the <b>strong</b> and <b>flexible</b> UI automation tool &#8211; the old/new member of the alien crew, on the way to save the world!</div><div></p>
-<p></div><div><span style="font-size: x-large;">What&#8217;s next?</span></div><div></p>
-<p></div><div>The rename is already done, waiting in maven repositories as Graphene 1.0.0.CR3.</div><div></p>
-<p></div><div>And what about migration? It&#8217;s pretty straight-forward, as you can see in my <a href="http://rik-ansikter.blogspot.com/2012/03/graphene-cr3-released-how-to-migrate.html">next post</a>.</div><div></p>
-<p></div><div>Thank you all who participated in choosing new name, renaming and migration testing (Vlasta Elias, Dan Allen, Jan Papousek, Karel Piwko)!</p>
-<p><span style="font-size: x-large;"><br />
-</span><br />
-<span style="font-size: x-large;">More project information</span></p>
-<p><a href="https://community.jboss.org/wiki/ArquillianGraphene">Home page</a><br />
-<a href="https://docs.jboss.org/author/display/ARQGRA">Documentation</a><br />
-<a href="https://issues.jboss.org/browse/ARQGRA">Issue tracker</a></div></div></p>
-    <div style='clear:both'></div>
-    <div class='tags'>
-      <span class='title'>
-        tags:
-      </span>
-      <a href='/blog/tags/arquillian'>
-        arquillian,
-      </a>
-      <a href='/blog/tags/ajocado'>
-        ajocado,
-      </a>
-      <a href='/blog/tags/graphene'>
-        graphene
-      </a>
-    </div>
-    <hr />
-  </div>
-  <div class='post'>
-    <h6>Tuesday, March 13, 2012</h6>
-    <h2 class='title'>
-      <a href='/blog/2012/03/great-times-at-jdc-2012-egypt.html'>Great times at JDC 2012, Egypt</a>
-    </h2>
-    <div dir="ltr" style="text-align: left;" trbidi="on">
-<p>I’m finally back from Cairo, where I was invited as speaker on <a href="http://jdc2012.egjug.org/">Java Developer Conference 2012</a>.</p>
-<p>If I should think of just one word explaining the conference, I would need to say: <b>a passion</b>.</p>
-<p>You could seen the passion from everywhere: discussions, an audience, follow-up questions, organizers.</p>
-<p>As I have written in last post, I had three sessions there &#8211; you can read more about them or view the slides at <a href="http://lanyrd.com/profile/lfryc/">Lanyard</a>:</p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://lanyrd.com/2012/jdc2012/sqkfz/"><img border="0" height="238" src="/images/blog/2012-03-13-great-times-at-jdc-2012-egypt/talk-aerogear.png" width="320" /></a></div><div class="separator" style="clear: both; text-align: center;">
-<p></div><div class="separator" style="clear: both; text-align: center;"><a href="http://lanyrd.com/2012/jdc2012/sqkgb/"><img border="0" height="238" src="/images/blog/2012-03-13-great-times-at-jdc-2012-egypt/talk-cdk.png" width="320" /></a></div><div class="separator" style="clear: both; text-align: center;"></p>
-<p></div><div class="separator" style="clear: both; text-align: center;"><a href="http://lanyrd.com/2012/jdc2012/sqkgc/"><img border="0" height="238" src="/images/blog/2012-03-13-great-times-at-jdc-2012-egypt/talk-arq.png" width="320" /></a></div><span style="font-size: large;"><br />
-</span><br />
-<div class="separator" style="clear: both; text-align: left;">The only what would I change is timing of sessions, because then me and <a href="http://lanyrd.com/profile/koentsje/">Koen’s</a> session had not conflict and Arquillian would take even more attention.</div><br />
-<div class="separator" style="clear: both; text-align: center;"><a href="/images/blog/2012-03-13-great-times-at-jdc-2012-egypt/AnjHDS2CQAAhSFk.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em; text-align: center;"><img border="0" height="320" src="/images/blog/2012-03-13-great-times-at-jdc-2012-egypt/AnjHDS2CQAAhSFk.jpg" width="240" /></a></div><br />
-I have spent lot of time in the JBoss booth and the venue, discussing precious projects!</p>
-<div class="separator" style="clear: both; text-align: center;"><a href="/images/blog/2012-03-13-great-times-at-jdc-2012-egypt/2012-03-13-great-times-at-jdc-2012-egypt_1.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="213" src="/images/blog/2012-03-13-great-times-at-jdc-2012-egypt/2012-03-13-great-times-at-jdc-2012-egypt_1.png" width="320" /></a></div><div class="separator" style="clear: both; text-align: center;">
-<p></div><div class="separator" style="clear: both; text-align: center;"><a href="/images/blog/2012-03-13-great-times-at-jdc-2012-egypt/2012-03-13-great-times-at-jdc-2012-egypt_2.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="213" src="/images/blog/2012-03-13-great-times-at-jdc-2012-egypt/2012-03-13-great-times-at-jdc-2012-egypt_2.png" width="320" /></a></div><br />
-After the conference closing, the good beer and the nice mood over the discussion about various, mainly JBoss-related and philosophical questions with <a href="http://lanyrd.com/profile/koentsje/">Koen</a> made my Sunday&#8217;s waking up really hectic &#8211; I arranged the trip over the pyramids for 9:00. Although the clock in the room was showing 6:25, it was nearly 9:30.</p>
-<p>But the morning’s difficulties were quickly shaded with all the great views on pyramids &#8211; there were so nice and as Koen expressed it exactly: mind-blowing. I really need to give another thanks to the our tour guide &#8211; Mahmud for taking us all &#8211; me, <a href="http://lanyrd.com/profile/joonaslehtinen/">Jonaas</a> and <a href="http://lanyrd.com/profile/crichardson/">Richard</a> &#8211; to the pyramids.</p>
-<div class="separator" style="clear: both; text-align: center;"><a href="/images/blog/2012-03-13-great-times-at-jdc-2012-egypt/IMG_6356a.JPG" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="240" src="/images/blog/2012-03-13-great-times-at-jdc-2012-egypt/IMG_6356a.JPG" width="320" /></a></div>
-<p>At overall, I would be really happy to speak at <span class="caps">JDC</span> again next year as well as discover other beauties of Egypt!</p>
-<div class="separator" style="clear: both; text-align: center;"><a href="/images/blog/2012-03-13-great-times-at-jdc-2012-egypt/IMG_6384a.JPG" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="252" src="/images/blog/2012-03-13-great-times-at-jdc-2012-egypt/IMG_6384a.JPG" width="320" /></a></div>
-</div>
-    <div style='clear:both'></div>
-    <div class='tags'>
-      <span class='title'>
-        tags:
-      </span>
-      <a href='/blog/tags/event'>
-        event,
-      </a>
-      <a href='/blog/tags/cdk'>
-        cdk,
-      </a>
-      <a href='/blog/tags/jug'>
-        jug,
-      </a>
-      <a href='/blog/tags/conference'>
-        conference,
-      </a>
-      <a href='/blog/tags/forge'>
-        forge,
-      </a>
-      <a href='/blog/tags/arquillian'>
-        arquillian,
-      </a>
-      <a href='/blog/tags/richfaces'>
-        richfaces,
-      </a>
-      <a href='/blog/tags/aerogear'>
-        aerogear
-      </a>
-    </div>
-    <hr />
-  </div>
-  <div class='post'>
-    <h6>Monday, March 5, 2012</h6>
-    <h2 class='title'>
-      <a href='/blog/2012/03/speaking-at-jdc12-in-cairo-egypt.html'>Speaking at JDC'12 in Cairo, Egypt</a>
-    </h2>
-    <div dir="ltr" style="text-align: left;" trbidi="on">
-<p>I&#8217;m speaking at <a href="http://jdc2012.egjug.org/"><span class="caps">JAVA</span> Developer Conference 2012</a> held at March 9-10th in Cairo, Egypt.</p>
-<p>I will give there 3 talks on my favorite topics: a web development with JBoss technologies and a testing.</p>
-<h4><a href="http://jdc2012.egjug.org/session/gear_you_need_go_mobile_java_enterprise">The Gear You Need To Go Mobile With Java Enterprise</a></h4>
-<p>In the first talk, I&#8217;m going to cover what could the Java enterprise offer you in days of a rising mobile platform.</p>
-<h4><a href="http://jdc2012.egjug.org/session/rapid_jsf_component_development_richfaces_cdk">A Rapid <span class="caps">JSF</span> Component Development with RichFaces <span class="caps">CDK</span></a></h4>
-<p>The second talk introduces RichFaces Component Development Kit as the tool to cover the space where JSF2 falls short &#8211; custom component development.</p>
-<h4><a href="http://jdc2012.egjug.org/session/arquillian_helping_developers_and_qa_get_along_and_get_apps_covered">Arquillian: Effective Tests from the Client to the Server</a></h4>
-<p>The last talk is about the latest movements in the space of a testing revolution started when Arquillian decided to save the earth. I will focus specifically on testing an integration of the client and the server.</p>
-<p>My JBoss fellow, Koen Aers,&nbsp;will be also presenting there and he covers lot of interesting stuff: <b>JBoss Tools</b>,<strong>* Forge *</strong>and** Arquillian** (yeah, Ike invades Egypt!). Let&#8217;s <a href="http://jdc2012.egjug.org/sessions">checkout his and other sessions</a>.</p>
-<p>The event haven&#8217;t started yet, but it&#8217;s already looking like great event, I&#8217;m looking forward to see you there!</div></p>
-    <div style='clear:both'></div>
-    <div class='tags'>
-      <span class='title'>
-        tags:
-      </span>
-      <a href='/blog/tags/event'>
-        event,
-      </a>
-      <a href='/blog/tags/cdk'>
-        cdk,
-      </a>
-      <a href='/blog/tags/jug'>
-        jug,
-      </a>
-      <a href='/blog/tags/conference'>
-        conference,
-      </a>
-      <a href='/blog/tags/forge'>
-        forge,
-      </a>
-      <a href='/blog/tags/arquillian'>
-        arquillian,
-      </a>
-      <a href='/blog/tags/richfaces'>
-        richfaces,
-      </a>
-      <a href='/blog/tags/aerogear'>
-        aerogear
-      </a>
-    </div>
-    <hr />
-  </div>
-  <div class='post'>
-    <h6>Friday, February 24, 2012</h6>
-    <h2 class='title'>
-      <a href='/blog/2012/02/wrap-up-arquillian-hackfest-developer.html'>Wrap-up: Arquillian Hackfest @ Developer Conference 2012 Brno</a>
-    </h2>
-    <p>Thank <b>all participants for contributing</b> to discussions on Arquillian HackFest!</p>
-    <p>The <b>10 people has attended</b> and shared their ideas on selected topics,<br />
-    and others came to see us on video stream and <span class="caps">IRC</span> channel!</p>
-    <p><a href="https://plus.google.com/109501071933862146039/posts/dyo3hU9smcj" target="_blank">The initial idea for this Hackfest</a> has arisen when we were discussing the topics we would like to cover in conference days, just after <b>Arquillian <span class="caps">SPI</span> talk from Aslak</b>.</p>
-    <p>Although we wasn&#8217;t able to cover all declared topics,<br />
-    we focused on the ones which were most related to incoming Arquillians,<br />
-    the <b>notes and white-boards</b> can be find here:</p>
-    <p><b><a href="https://github.com/arquillian/arquillian-organization/wiki/Future:-gwt" target="_blank">Future: <span class="caps">GWT</span></a></b></p>
-    <p><b><a href="https://github.com/arquillian/arquillian-organization/wiki/Future:-javascript" target="_blank">Future: JavaScript</a></b></p>
-    <p><b><a href="https://github.com/arquillian/arquillian-organization/wiki/Future:-performance-testing" target="_blank">Future: Performance testing</a></b></p>
-    <p><b>Future: JSFUnit.NG</b><br />
-    ( no notes here, it was really short session &#8211; after Arquillian <span class="caps">SPI</span> talks, it didn&#8217;t left much more to discuss &#8211; thanks Aslak! )</p>
-    <p>It was pleasure to see so much ideas flowing,<strong>* let&#8217;s grab them and equip Ike with even more mighty weapons</strong>* for fighting with bugs. ;-)</p>
-    <div style='clear:both'></div>
-    <div class='tags'>
-      <span class='title'>
-        tags:
-      </span>
-      <a href='/blog/tags/performance'>
-        performance,
-      </a>
-      <a href='/blog/tags/javascript'>
-        javascript,
-      </a>
-      <a href='/blog/tags/hackfest'>
-        hackfest,
-      </a>
-      <a href='/blog/tags/arquillian'>
-        arquillian,
-      </a>
-      <a href='/blog/tags/gwt'>
-        gwt,
-      </a>
-      <a href='/blog/tags/selenium'>
-        selenium,
-      </a>
-      <a href='/blog/tags/jsf'>
-        jsf
-      </a>
-    </div>
-    <hr />
-  </div>
-  <div class='post'>
-    <h6>Tuesday, September 20, 2011</h6>
-    <h2 class='title'>
-      <a href='/blog/2011/09/1-day-conference-in-vienna-slides-and.html'>1-day conference in Vienna - Slides and Wrap up</a>
-    </h2>
-    <p>Last event I have attended was a great success.<div></p>
-    <p></div><div>I have made two talks there for which I would like to share slides with you:</div><div><ul><li><b>RichFaces 4 rolling to Mobile Era</b> (<a href="http://www.slideshare.net/lfryc/richfaces-4-rolling-to-mobile-era">Slides</a> | <a href="http://lanyrd.com/2011/jsf-and-richfaces-workshop-conference/sgzmd/">Lanyard</a>)</li><li><b>Testing <span class="caps">JSF</span> with Arquillian and Selenium</b> (<a href="http://www.slideshare.net/lfryc/testing-jsf-with-arquillian-and-selenium">Slides</a> | <a href="http://lanyrd.com/2011/jsf-and-richfaces-workshop-conference/sgzmf/">Lanyard</a>)</li></ul><div>I had got very valuable feedback from attendees on both sessions, thank you!</div></div></p>
-    <div style='clear:both'></div>
-    <div class='tags'>
-      <span class='title'>
-        tags:
-      </span>
-      <a href='/blog/tags/mobile'>
-        mobile,
-      </a>
-      <a href='/blog/tags/arquillian'>
-        arquillian,
-      </a>
-      <a href='/blog/tags/jsfunit'>
-        jsfunit,
-      </a>
-      <a href='/blog/tags/richfaces'>
-        richfaces,
-      </a>
-      <a href='/blog/tags/testing'>
-        testing,
-      </a>
-      <a href='/blog/tags/selenium'>
-        selenium
-      </a>
-    </div>
-    <hr />
-  </div>
-  <div class='post'>
-    <h6>Wednesday, August 31, 2011</h6>
-    <h2 class='title'>
-      <a href='/blog/2011/08/talking-on-richfacesmobiles-and-on-jsf.html'>Talking on RichFaces@mobiles and on JSF testing in Vienna</a>
-    </h2>
-    <p>I would like to invite you on <b><a href="http://www.objective.de/en/newspress/uniqa-workshop/"><span class="caps">JSF</span> and RichFaces workshop <span class="caps">UNIQA</span></a></b> held at September 7-9th in Vienna, Austria.</p>
-<p>While first two days will be <a href="http://mkblog.exadel.com/2011/08/jsfrichfaces-workshop-plus-1-day-conference-in-vienna-austria-sept-7-9/">Max Katz covering thoroughly <span class="caps">JSF</span> and RichFaces</a>, last conference day will be dedicated to topics related to RichFaces.</p>
-<p>I will be presenting on what can <b>RichFaces offer in upcoming mobile era</b> and what are current <b>state-of-art techniques in testing <span class="caps">JSF</span> applications</b> with Arquillian, Selenium and JSFUnit.</p>
-<p>You can also see <a href="http://www.objective.de/en/newspress/uniqa-workshop/programm/">detailed program</a> and you can watch the <a href="http://lanyrd.com/2011/jsf-and-richfaces-workshop-conference/">event on Lanyard</a>.</p>
-<p>Looking forward to meet you there!</p>
-    <div style='clear:both'></div>
-    <div class='tags'>
-      <span class='title'>
-        tags:
-      </span>
-      <a href='/blog/tags/event'>
-        event,
-      </a>
-      <a href='/blog/tags/mobile'>
-        mobile,
-      </a>
-      <a href='/blog/tags/arquillian'>
-        arquillian,
-      </a>
-      <a href='/blog/tags/jsfunit'>
-        jsfunit,
-      </a>
-      <a href='/blog/tags/richfaces'>
-        richfaces,
-      </a>
-      <a href='/blog/tags/selenium'>
-        selenium,
-      </a>
-      <a href='/blog/tags/workshop'>
-        workshop
-      </a>
-    </div>
-    <hr />
-  </div>
-  <div class='pagination' style='text-align: center'>
-    <ul>
-      <li class='disabled'>
-        <a href='#'>
-          <span class='icon-fast-backward'></span>
-        </a>
-      </li>
-      <li class='disabled'>
-        <a href='#'>
-          <span class='icon-step-backward'></span>
-        </a>
-      </li>
-      <li class='active'>
-        <a href='#'>1 of 1</a>
-      </li>
-      <li class='disabled'>
-        <a href='#'>
-          <span class='icon-step-forward'></span>
-        </a>
-      </li>
-      <li class='disabled'>
-        <a href='#'>
-          <span class='icon-fast-forward'></span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-</div>
-<div class='span3'>
-  <div id='sidebar'>
-    <div class='about'>
-      <div class='title'>about me</div>
-      <img src='/images/lfryc.jpg' />
-      <div class='name'>Lukáš Fryč</div>
-      <div class='details'>
-        <ul>
-          <li>Software Engineer at JBoss, by Red hat</li>
-          <li>RichFaces Core Developer</li>
-          <li>Arquillian Extensions Lead for Warp and Graphene</li>
-        </ul>
-      </div>
-    </div>
-    <hr />
-    <div class='title'>Blog Archive</div>
-    <div class='archive'>
-      <ul id='years'>
-        <li class='year' id='year_2012'>
-          <a data-parent='#years' data-target='#year_2012 &gt; ul.year' data-toggle='collapse' href='#2012'>
-            2012
-          </a>
-          <ul class='year collapse'>
-            <li class='month' id='month_8_2012'>
-              <span class='month'>August</span>
-              <span class='count'>(2)</span>
-              <ul class='month'>
-                <li>
-                  <a href='/blog/2012/08/incremental-build-with-richfaces-cdk.html'>Incremental build with RichFaces CDK</a>
-                </li>
-                <li>
-                  <a href='/blog/2012/08/jsf-meets-skinning-awesomeness-of-less.html'>JSF meets Skinning Awesomeness of LESS</a>
+          <div id='content'>
+            <header class='jumbotron subhead page-header'>
+              <h1>Lukas Fryc</h1>
+              <p>Java EE, Testing, Fast Turnaround</p>
+            </header>
+            <div class='post'>
+              <h4 class='title post-title'>
+                <a href='/blog/2012/04/graphene-100final-released.html'>Graphene 1.0.0.Final Released</a>
+              </h4>
+              <h6>April 11, 2012</h6>
+              <p>The Arquillian Graphene, the project focusing on making a real-browser automation a breeze, is now reaching first Final release.
+              The Graphene is joining rest of the Arquillian party, building on top of Arquillian framework integration and Drone extension, which reached their stable version yesterday...</p>
+              <div class='tags'>
+                <span class='title'></span>
+                <a href='/blog/tags/arquillian'>
+                  <span class='badge'>arquillian</span>
+                </a>
+                <a href='/blog/tags/graphene'>
+                  <span class='badge'>graphene</span>
+                </a>
+              </div>
+              <hr />
+            </div>
+            <div class='post'>
+              <h4 class='title post-title'>
+                <a href='/blog/2012/03/goodbye-ajocado-welcome-graphene.html'>Goodbye, Ajocado - Welcome, Graphene!</a>
+              </h4>
+              <h6>March 19, 2012</h6>
+              <p>Goodbye, Ajocado
+              Wait, the Ajocado project is not leaving us!
+              It is just undergoing rename...</p>
+              <div class='tags'>
+                <span class='title'></span>
+                <a href='/blog/tags/arquillian'>
+                  <span class='badge'>arquillian</span>
+                </a>
+                <a href='/blog/tags/graphene'>
+                  <span class='badge'>graphene</span>
+                </a>
+              </div>
+              <hr />
+            </div>
+            <div class='pagination' style='text-align: center'>
+              <ul>
+                <li class='active'>
+                  <a href='#'>1</a>
                 </li>
               </ul>
-            </li>
-            <li class='month' id='month_5_2012'>
-              <span class='month'>May</span>
-              <span class='count'>(1)</span>
-              <ul class='month'>
-                <li>
-                  <a href='/blog/2012/05/in-foothills-of-alps-wrap-up-of-confess.html'>In the foothills of Alps - wrap-up of ConFess 2012</a>
-                </li>
+            </div>
+          </div>
+        </div>
+        <div class='span3'>
+          <div class='well' id='sidebar'>
+            <ul class='nav nav-list'>
+              <li class='nav-header'>About Me</li>
+              <li>
+                <img src='/images/lfryc.jpg' />
+              </li>
+              <li class='divider'></li>
+              <li>Lukáš Fryč</li>
+              <ul>
+                <li>Software Engineer</li>
+                <li>JBoss, by Red Hat</li>
               </ul>
-            </li>
-            <li class='month' id='month_4_2012'>
-              <span class='month'>April</span>
-              <span class='count'>(2)</span>
-              <ul class='month'>
-                <li>
-                  <a href='/blog/2012/04/graphene-100final-released.html'>Graphene 1.0.0.Final Released</a>
-                </li>
-                <li>
-                  <a href='/blog/2012/04/full-fledged-debugging-for-mobile.html'>Full-Fledged Debugging for Mobile Browsers</a>
-                </li>
-              </ul>
-            </li>
-            <li class='month' id='month_3_2012'>
-              <span class='month'>March</span>
-              <span class='count'>(4)</span>
-              <ul class='month'>
-                <li>
-                  <a href='/blog/2012/03/incredibly-fast-jsf-component.html'>Incredibly Fast JSF Component Development</a>
-                </li>
-                <li>
-                  <a href='/blog/2012/03/goodbye-ajocado-welcome-graphene.html'>Goodbye, Ajocado - Welcome, Graphene!</a>
-                </li>
-                <li>
-                  <a href='/blog/2012/03/great-times-at-jdc-2012-egypt.html'>Great times at JDC 2012, Egypt</a>
-                </li>
-                <li>
-                  <a href='/blog/2012/03/speaking-at-jdc12-in-cairo-egypt.html'>Speaking at JDC'12 in Cairo, Egypt</a>
-                </li>
-              </ul>
-            </li>
-            <li class='month' id='month_2_2012'>
-              <span class='month'>February</span>
-              <span class='count'>(4)</span>
-              <ul class='month'>
-                <li>
-                  <a href='/blog/2012/02/wrap-up-arquillian-hackfest-developer.html'>Wrap-up: Arquillian Hackfest @ Developer Conference 2012 Brno</a>
-                </li>
-                <li>
-                  <a href='/blog/2012/02/re-routing-jsf-resource-requests-with.html'>Re-routing JSF resource requests with RichFaces Resource Mapping</a>
-                </li>
-                <li>
-                  <a href='/blog/2012/02/optimizing-resource-loading-with.html'>Optimizing Resource Loading with RichFaces 4.2</a>
-                </li>
-                <li>
-                  <a href='/blog/2012/02/configuring-richfaces-push-with-42.html'>4 simple steps for RichFaces Push with 4.2</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class='year' id='year_2011'>
-          <a data-parent='#years' data-target='#year_2011 &gt; ul.year' data-toggle='collapse' href='#2011'>
-            2011
-          </a>
-          <ul class='year collapse'>
-            <li class='month' id='month_9_2011'>
-              <span class='month'>September</span>
-              <span class='count'>(2)</span>
-              <ul class='month'>
-                <li>
-                  <a href='/blog/2011/09/improvements-of-richfaces-editor-in.html'>Improvements of RichFaces Editor in Milestone2</a>
-                </li>
-                <li>
-                  <a href='/blog/2011/09/1-day-conference-in-vienna-slides-and.html'>1-day conference in Vienna - Slides and Wrap up</a>
-                </li>
-              </ul>
-            </li>
-            <li class='month' id='month_8_2011'>
-              <span class='month'>August</span>
-              <span class='count'>(3)</span>
-              <ul class='month'>
-                <li>
-                  <a href='/blog/2011/08/talking-on-richfacesmobiles-and-on-jsf.html'>Talking on RichFaces@mobiles and on JSF testing in Vienna</a>
-                </li>
-                <li>
-                  <a href='/blog/2011/08/lot-of-improvements-has-been-done-in-4.html'>Push Improvements in RichFaces 4.1</a>
-                </li>
-                <li>
-                  <a href='/blog/2011/08/editor-for-richfaces-41.html'>Editor for RichFaces 4.1</a>
-                </li>
-              </ul>
-            </li>
-            <li class='month' id='month_7_2011'>
-              <span class='month'>July</span>
-              <span class='count'>(1)</span>
-              <ul class='month'>
-                <li>
-                  <a href='/blog/2011/07/richfaces-heading-to-jboss-as7-era.html'>RichFaces Heading to JBoss AS7 Era</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <hr />
-    <div class='title'>Tags</div>
-    <div class='tags'>
-      <div class='tag-cloud'>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/aerogear/'>aerogear</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/ajocado/'>ajocado</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/application-server/'>application-server</a>
-        </span>
-        <span class='tag tag-3'>
-          <a href='http://lukas.fryc.eu/blog/tags/arquillian/'>arquillian</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/as7/'>as7</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/atmosphere/'>atmosphere</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/cdi/'>cdi</a>
-        </span>
-        <span class='tag tag-2'>
-          <a href='http://lukas.fryc.eu/blog/tags/cdk/'>cdk</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/comet/'>comet</a>
-        </span>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/conference/'>conference</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/debugging/'>debugging</a>
-        </span>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/editor/'>editor</a>
-        </span>
-        <span class='tag tag-2'>
-          <a href='http://lukas.fryc.eu/blog/tags/event/'>event</a>
-        </span>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/forge/'>forge</a>
-        </span>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/graphene/'>graphene</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/gwt/'>gwt</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/hackfest/'>hackfest</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/javascript/'>javascript</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/jboss/'>jboss</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/jboss-as7/'>jboss-as7</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/jms/'>jms</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/jsf/'>jsf</a>
-        </span>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/jsfunit/'>jsfunit</a>
-        </span>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/jug/'>jug</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/less/'>less</a>
-        </span>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/mobile/'>mobile</a>
-        </span>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/performance/'>performance</a>
-        </span>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/push/'>push</a>
-        </span>
-        <span class='tag tag-1'>
-          <a href='http://lukas.fryc.eu/blog/tags/resource-loading/'>resource-loading</a>
-        </span>
-        <span class='tag tag-6'>
-          <a href='http://lukas.fryc.eu/blog/tags/richfaces/'>richfaces</a>
-        </span>
-        <span class='tag tag-2'>
-          <a href='http://lukas.fryc.eu/blog/tags/selenium/'>selenium</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/showcase/'>showcase</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/testing/'>testing</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/tweetstream/'>tweetstream</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/websockets/'>websockets</a>
-        </span>
-        <span class='tag tag-0'>
-          <a href='http://lukas.fryc.eu/blog/tags/workshop/'>workshop</a>
-        </span>
-      </div>
-    </div>
-    <hr />
-    <div class='title'>twitter updates</div>
-    <div class='tweet'>
-      <script type='text/javascript'>
-        //<![CDATA[
-          $(function() {
-            $(".tweet").tweet({
-              username: "lfryc",
-              avatar_size: 24,
-              count: 4,
-              template: "{text} {time}",
-              loading_text: "Loading tweets...",
-              outro_text: '<a class="btn"  href="https://twitter.com/#!/lfryc">Follow me on twitter</a>'
-            });
-          });
-        //]]>
-      </script>
-    </div>
-    <hr />
-    <div class='title'>Stack Overflow</div>
-    <a href='http://stackoverflow.com/users/1108684/lukas-fryc'>
-      <img alt='profile for Lukas Fryc at Stack Overflow, Q&amp;amp;A for professional and enthusiast programmers' height='58' src='http://stackoverflow.com/users/flair/1108684.png' title='profile for Lukas Fryc at Stack Overflow, Q&amp;amp;A for professional and enthusiast programmers' width='208' />
-    </a>
-  </div>
-</div>
-<script src='/javascripts/jquery-tweet.js' type='text/javascript'></script>
+              <li class='divider'></li>
+              <li class='years nav-header'>Blog Archive</li>
+              <li class='year' id='year_2012'>
+                <a data-target='#year_2012 &gt; ul.year' data-toggle='collapse' href='#2012'>
+                  2012
+                </a>
+                <ul class='year collapse nav nav-list'>
+                  <li class='month nav-header' id='month_8_2012'>
+                    <a data-target='#month_8_2012 &gt; ul.month' data-toggle='collapse' href='#8_2012'>
+                      <span class='month'>August</span>
+                      <span class='count'>(2)</span>
+                    </a>
+                    <ul class='month nav nav-list collapse'>
+                      <li>
+                        <a href='/blog/2012/08/incremental-build-with-richfaces-cdk.html'>Incremental build with RichFaces CDK</a>
+                      </li>
+                      <li class='divider'></li>
+                      <li>
+                        <a href='/blog/2012/08/jsf-meets-skinning-awesomeness-of-less.html'>JSF meets Skinning Awesomeness of LESS</a>
+                      </li>
+                      <li class='divider'></li>
+                    </ul>
+                  </li>
+                  <li class='month nav-header' id='month_5_2012'>
+                    <a data-target='#month_5_2012 &gt; ul.month' data-toggle='collapse' href='#5_2012'>
+                      <span class='month'>May</span>
+                      <span class='count'>(1)</span>
+                    </a>
+                    <ul class='month nav nav-list collapse'>
+                      <li>
+                        <a href='/blog/2012/05/in-foothills-of-alps-wrap-up-of-confess.html'>In the foothills of Alps - wrap-up of ConFess 2012</a>
+                      </li>
+                      <li class='divider'></li>
+                    </ul>
+                  </li>
+                  <li class='month nav-header' id='month_4_2012'>
+                    <a data-target='#month_4_2012 &gt; ul.month' data-toggle='collapse' href='#4_2012'>
+                      <span class='month'>April</span>
+                      <span class='count'>(2)</span>
+                    </a>
+                    <ul class='month nav nav-list collapse'>
+                      <li>
+                        <a href='/blog/2012/04/graphene-100final-released.html'>Graphene 1.0.0.Final Released</a>
+                      </li>
+                      <li class='divider'></li>
+                      <li>
+                        <a href='/blog/2012/04/full-fledged-debugging-for-mobile.html'>Full-Fledged Debugging for Mobile Browsers</a>
+                      </li>
+                      <li class='divider'></li>
+                    </ul>
+                  </li>
+                  <li class='month nav-header' id='month_3_2012'>
+                    <a data-target='#month_3_2012 &gt; ul.month' data-toggle='collapse' href='#3_2012'>
+                      <span class='month'>March</span>
+                      <span class='count'>(4)</span>
+                    </a>
+                    <ul class='month nav nav-list collapse'>
+                      <li>
+                        <a href='/blog/2012/03/incredibly-fast-jsf-component.html'>Incredibly Fast JSF Component Development</a>
+                      </li>
+                      <li class='divider'></li>
+                      <li>
+                        <a href='/blog/2012/03/goodbye-ajocado-welcome-graphene.html'>Goodbye, Ajocado - Welcome, Graphene!</a>
+                      </li>
+                      <li class='divider'></li>
+                      <li>
+                        <a href='/blog/2012/03/great-times-at-jdc-2012-egypt.html'>Great times at JDC 2012, Egypt</a>
+                      </li>
+                      <li class='divider'></li>
+                      <li>
+                        <a href='/blog/2012/03/speaking-at-jdc12-in-cairo-egypt.html'>Speaking at JDC'12 in Cairo, Egypt</a>
+                      </li>
+                      <li class='divider'></li>
+                    </ul>
+                  </li>
+                  <li class='month nav-header' id='month_2_2012'>
+                    <a data-target='#month_2_2012 &gt; ul.month' data-toggle='collapse' href='#2_2012'>
+                      <span class='month'>February</span>
+                      <span class='count'>(4)</span>
+                    </a>
+                    <ul class='month nav nav-list collapse'>
+                      <li>
+                        <a href='/blog/2012/02/wrap-up-arquillian-hackfest-developer.html'>Wrap-up: Arquillian Hackfest @ Developer Conference 2012 Brno</a>
+                      </li>
+                      <li class='divider'></li>
+                      <li>
+                        <a href='/blog/2012/02/re-routing-jsf-resource-requests-with.html'>Re-routing JSF resource requests with RichFaces Resource Mapping</a>
+                      </li>
+                      <li class='divider'></li>
+                      <li>
+                        <a href='/blog/2012/02/optimizing-resource-loading-with.html'>Optimizing Resource Loading with RichFaces 4.2</a>
+                      </li>
+                      <li class='divider'></li>
+                      <li>
+                        <a href='/blog/2012/02/configuring-richfaces-push-with-42.html'>4 simple steps for RichFaces Push with 4.2</a>
+                      </li>
+                      <li class='divider'></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class='year' id='year_2011'>
+                <a data-target='#year_2011 &gt; ul.year' data-toggle='collapse' href='#2011'>
+                  2011
+                </a>
+                <ul class='year collapse nav nav-list'>
+                  <li class='month nav-header' id='month_9_2011'>
+                    <a data-target='#month_9_2011 &gt; ul.month' data-toggle='collapse' href='#9_2011'>
+                      <span class='month'>September</span>
+                      <span class='count'>(2)</span>
+                    </a>
+                    <ul class='month nav nav-list collapse'>
+                      <li>
+                        <a href='/blog/2011/09/1-day-conference-in-vienna-slides-and.html'>1-day conference in Vienna - Slides and Wrap up</a>
+                      </li>
+                      <li class='divider'></li>
+                      <li>
+                        <a href='/blog/2011/09/improvements-of-richfaces-editor-in.html'>Improvements of RichFaces Editor in Milestone2</a>
+                      </li>
+                      <li class='divider'></li>
+                    </ul>
+                  </li>
+                  <li class='month nav-header' id='month_8_2011'>
+                    <a data-target='#month_8_2011 &gt; ul.month' data-toggle='collapse' href='#8_2011'>
+                      <span class='month'>August</span>
+                      <span class='count'>(3)</span>
+                    </a>
+                    <ul class='month nav nav-list collapse'>
+                      <li>
+                        <a href='/blog/2011/08/talking-on-richfacesmobiles-and-on-jsf.html'>Talking on RichFaces@mobiles and on JSF testing in Vienna</a>
+                      </li>
+                      <li class='divider'></li>
+                      <li>
+                        <a href='/blog/2011/08/lot-of-improvements-has-been-done-in-4.html'>Push Improvements in RichFaces 4.1</a>
+                      </li>
+                      <li class='divider'></li>
+                      <li>
+                        <a href='/blog/2011/08/editor-for-richfaces-41.html'>Editor for RichFaces 4.1</a>
+                      </li>
+                      <li class='divider'></li>
+                    </ul>
+                  </li>
+                  <li class='month nav-header' id='month_7_2011'>
+                    <a data-target='#month_7_2011 &gt; ul.month' data-toggle='collapse' href='#7_2011'>
+                      <span class='month'>July</span>
+                      <span class='count'>(1)</span>
+                    </a>
+                    <ul class='month nav nav-list collapse'>
+                      <li>
+                        <a href='/blog/2011/07/richfaces-heading-to-jboss-as7-era.html'>RichFaces Heading to JBoss AS7 Era</a>
+                      </li>
+                      <li class='divider'></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class='divider'></li>
+              <li class='nav-header'>Tags</li>
+              <li>
+                <div class='tag-cloud'>
+                  <span class='tag tag-1'>
+                    <a href='http://lukas.fryc.eu/blog/tags/arquillian/'>arquillian</a>
+                  </span>
+                  <span class='tag tag-0'>
+                    <a href='http://lukas.fryc.eu/blog/tags/as7/'>as7</a>
+                  </span>
+                  <span class='tag tag-0'>
+                    <a href='http://lukas.fryc.eu/blog/tags/cdi/'>cdi</a>
+                  </span>
+                  <span class='tag tag-1'>
+                    <a href='http://lukas.fryc.eu/blog/tags/cdk/'>cdk</a>
+                  </span>
+                  <span class='tag tag-0'>
+                    <a href='http://lukas.fryc.eu/blog/tags/debugging/'>debugging</a>
+                  </span>
+                  <span class='tag tag-1'>
+                    <a href='http://lukas.fryc.eu/blog/tags/editor/'>editor</a>
+                  </span>
+                  <span class='tag tag-2'>
+                    <a href='http://lukas.fryc.eu/blog/tags/event/'>event</a>
+                  </span>
+                  <span class='tag tag-1'>
+                    <a href='http://lukas.fryc.eu/blog/tags/graphene/'>graphene</a>
+                  </span>
+                  <span class='tag tag-0'>
+                    <a href='http://lukas.fryc.eu/blog/tags/hackfest/'>hackfest</a>
+                  </span>
+                  <span class='tag tag-0'>
+                    <a href='http://lukas.fryc.eu/blog/tags/less/'>less</a>
+                  </span>
+                  <span class='tag tag-0'>
+                    <a href='http://lukas.fryc.eu/blog/tags/mobile/'>mobile</a>
+                  </span>
+                  <span class='tag tag-0'>
+                    <a href='http://lukas.fryc.eu/blog/tags/performance/'>performance</a>
+                  </span>
+                  <span class='tag tag-1'>
+                    <a href='http://lukas.fryc.eu/blog/tags/push/'>push</a>
+                  </span>
+                  <span class='tag tag-0'>
+                    <a href='http://lukas.fryc.eu/blog/tags/resource-loading/'>resource-loading</a>
+                  </span>
+                  <span class='tag tag-6'>
+                    <a href='http://lukas.fryc.eu/blog/tags/richfaces/'>richfaces</a>
+                  </span>
+                  <span class='tag tag-2'>
+                    <a href='http://lukas.fryc.eu/blog/tags/wrap-up/'>wrap-up</a>
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div class='row'></div>
       <hr />
